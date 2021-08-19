@@ -9,11 +9,11 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 
 import TwitterIcon from '@material-ui/icons/Twitter';
-import { FaDiscord } from "react-icons/fa";
+
 
 import "animate.css"
 
-import { Animated } from "react-animated-css";
+// import { Animated } from "react-animated-css";
 
 function StartingPage() {
 
@@ -134,7 +134,7 @@ function StartingPage() {
                                 <a href="https://t.me/joinchat/xrbUyk1degk5OTll" target="_blank"><i className="icon ion-social-instagram" ><TelegramIcon /></i></a>
                                 <a href="https://www.linkedin.com/company/cyduck/" target="_blank"><i className="icon ion-social-youtube-outline" ><LinkedInIcon /></i></a>
                                 <a ><i className="icon ion-social-twitter" ></i><TwitterIcon /></a>
-                                <a href="#" href="https://discord.gg/XJNPaF4b" target="_blank"><FaDiscord /></a>
+                                <a href="#" href="https://discord.gg/XJNPaF4b" target="_blank">Discord</a>
                             </div>
 
                             <ul className="list-inline">
