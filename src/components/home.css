@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+}
+.box {
+  border: 1px solid none;
+  width: 100%;
+  height: 700px;
+  /* background: linear-gradient(
+      to right,
+      rgba(12, 65, 57, 0.73),
+      rgba(3, 39, 85, 0.52)
+    ),
+    url(blue.jpg), no-repeat; */
+  background-color: #dddddd;
+}
+
+.boxbar {
+  margin: 0;
+}
+.boxbar address a {
+  float: right;
+  text-decoration: none;
+  color: white;
+}
+
+.boxbar i {
+  color: white;
+  width: 30px;
+}
+.list {
+  border-bottom-width: 900px;
+  position: relative;
+
+  padding: 13px;
+  margin-top: 0px;
+  left: 900px;
+}
+.list ul li {
+  float: left;
+  margin-left: 30px;
+  text-align: center;
+  width: 90px;
+  list-style-type: none;
+}
+
+.homediv {
+  position: relative;
+  bottom: 3px;
+
+  width: 1530px;
+}
+
+.list ul li a {
+  text-decoration: none;
+
+  margin-left: 10px;
+  margin-bottom: 27px;
+  color: #000;
+  font-size: 19px;
+}
+.list ul li a:hover {
+  text-decoration: none;
+}
+
+.writer h1 {
+  float: left;
+}
+
+.heading h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 140px;
+  position: relative;
+  margin-top: 90px;
+  display: inline-block;
+
+  text-transform: uppercase;
+  color: #000;
+  text-shadow: 1px 1px 1px;
+
+  line-height: 50px;
+  animation-name: headingappear;
+  animation-duration: 2s;
+}
+
+@keyframes headingappear {
+  from {
+    opacity: 0;
+    margin-left: -20px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+.writer {
+  position: relative;
+  top: 30px;
+
+  width: 650px;
+  margin-left: 89px;
+}
+.writer h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #000;
+  text-shadow: 1px 1px 1px;
+  padding-top: 10px;
+  margin-top: 10px;
+  line-height: 50px;
+}
+.writer h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  text-transform: capitalize;
+  width: 600px;
+  color: #000;
+  position: absolute;
+  top: 110%;
+  opacity: 0.6;
+}
+
+.strlinks {
+  position: absolute;
+  top: 106%;
+  left: 165%;
+  border: none;
+  color: white;
+  background-color: #0095ff;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-left: 40px;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.cyduck_desc {
+  color: #000;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  font-family: "Candal", serif;
+}
+
+.discord_img {
+  width: 30px;
+  height: 30px;
+}
+
+.strlinks2 {
+  position: absolute;
+  top: 106%;
+  left: 93%;
+  border: none;
+  color: white;
+  background-color: #0095ff;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-left: 40px;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.strlinks2:hover {
+  background: #0077cc;
+  color: white;
+  text-decoration: none;
+}
+
+.try {
+  position: absolute;
+  top: 106%;
+  left: 129%;
+  border: none;
+  text-transform: uppercase;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+}
+.try:hover {
+  background: #0077cc;
+  color: white;
+}
+.strlinks:hover {
+  background: #0077cc;
+  color: white;
+  text-decoration: none;
+}
+
+.about-us {
+  padding-top: 70px;
+  width: 100%;
+  text-align: center;
+  height: auto;
+  background: #dddddd;
+}
+
+@keyframes aboutappear {
+  from {
+    opacity: 0;
+    margin-left: -25px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+.about-us h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #000;
+}
+.about-us h4 {
+  width: 60%;
+  margin: 50px auto;
+
+  padding: 15px;
+  color: #000;
+  padding-top: 30px;
+  margin-left: 10;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-basis: 40%;
+}
+
+.about-content img {
+  width: 400px;
+  height: 400px;
+  margin: 15px;
+  margin-right: 0;
+  margin-left: 20px;
+  border-radius: 500px;
+}
+.about-content p {
+  margin-top: 50px;
+  opacity: 1;
+}
+
+.payment {
+  padding-top: 100px;
+  width: 100%;
+  text-align: center;
+
+  background: #dddddd;
+  padding-bottom: 60px;
+}
+.payment h2 {
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: "Candal", serif;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.paymentcontain {
+  width: 1550px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-basis: 33%;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 10px;
+}
+.payment-box {
+  background-color: #fec110;
+  width: 200px;
+  border: 2px solid #ffd220;
+  margin-top: 10px;
+  margin-right: 25px;
+  padding: 25px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  border-radius: 15px;
+  color: white;
+}
+
+.cyduck {
+  width: 50px;
+  height: 50px;
+}
+
+.payment-box:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.payment h3:hover {
+  /* color: white; */
+  font-weight: 500;
+}
+
+.proceed-to-pay form input[type="submit"] {
+  position: absolute;
+  top: 70%;
+  left: 41%;
+  z-index: 8;
+  width: 17%;
+  border: none;
+  color: wheat;
+  background-color: rgb(9, 9, 133);
+  text-transform: uppercase;
+  padding: 10px;
+}
+.proceed-to-pay form input[type="submit"]:hover {
+  background: rgb(43, 63, 4);
+}
+
+.content h3 {
+  margin-bottom: 20px;
+  margin-top: 7px;
+  transition: 0.6s;
+}
+.content p {
+  line-height: 2;
+  transition: 0.6s;
+}
+.content a {
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 20px;
+  padding: 20px;
+  align-items: center;
+  border: 2px solid wheat;
+  border-radius: 20px;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  height: 400px;
+
+  background: lightslategray;
+}
+
+.footer-basic {
+  padding: 40px 0;
+
+  color: #4b4c4d;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}

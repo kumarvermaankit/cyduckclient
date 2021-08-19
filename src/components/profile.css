@@ -1,0 +1,351 @@
+.container {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: auto;
+  height: auto;
+  border: 5px solid white;
+  border-radius: 20px;
+  background: #2f3a4c;
+  margin-top: 50px;
+  color: white;
+}
+.pimg {
+  box-sizing: border-box;
+  width: 149px;
+  height: 149px;
+
+  border-radius: 50%;
+  margin: 0;
+  margin-left: 15px;
+  margin-top: 10px;
+  border: 5px solid red;
+  padding: 5px;
+  background-color: khaki;
+}
+.inpt,
+select {
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background: none;
+  color: lightblue;
+  margin-bottom: 13px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #0082e6;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+.inpt {
+  margin-left: 550px;
+  margin-bottom: 20px;
+  margin-top: -25px;
+}
+.inpt:focus {
+  border-bottom: 2px solid wheat;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.pswinput {
+  background: none;
+  color: lightblue;
+
+  margin-bottom: 50px;
+  position: relative;
+  left: 170px;
+  top: 3px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #0082e6;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.pswinput:hover {
+  border-bottom: 2px solid wheat;
+
+  color: white;
+  transition: 0.2s ease;
+}
+
+.pswbtn {
+  display: inline-block;
+  position: relative;
+  background: transparent;
+  font-size: 20px;
+  border: solid;
+  color: #39739d;
+  width: 190px;
+  height: 48px;
+  background-color: #e1ecf4;
+  border-color: #7aa7c7;
+  text-align: center;
+  padding-top: 6px;
+  border-radius: 15px;
+  margin-left: 700px;
+}
+
+.pswbtn:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #b3d3ea;
+}
+
+.pshead {
+  margin-left: 450px;
+}
+
+.pswdiv {
+  margin-left: 274px;
+  margin-top: 60px;
+}
+
+.ip {
+  display: block;
+  margin-right: 20px;
+}
+
+.editbtn {
+  position: relative;
+  height: 25px;
+  width: 30px;
+  left: 780px;
+  top: -45px;
+  border: none;
+  color: white;
+  text-align: center;
+  padding-right: 28px;
+  border-radius: 5px;
+}
+
+.l {
+  font-size: 20px;
+  position: absolute;
+  left: 530px;
+  margin-top: 10px;
+}
+
+.bt {
+  background-color: white;
+  color: black;
+  height: 40px;
+  width: 120px;
+  font-size: 20px;
+  margin: 0px;
+  transition: all 0.3s;
+
+  position: relative;
+  left: 490px;
+}
+
+.drop_down1 {
+  min-width: 100px;
+  width: auto;
+  font-size: 14px;
+  color: black;
+}
+
+.bt2 {
+  height: fit-content;
+  background: transparent;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 160px;
+}
+.bt2:hover {
+  transform: scale(1.1);
+}
+
+.bt3 {
+  height: 35px;
+  width: 100px;
+  background-color: #d4d1b5;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  margin-left: 500px;
+  margin-bottom: 20px;
+  transition: 0.4s ease-in-out;
+}
+
+.bt3:hover {
+  transform: scale(1.1);
+}
+.sklheader {
+  font-size: 20px;
+}
+
+.skilldiv {
+  margin: 20px;
+  margin-left: 500px;
+  padding: auto;
+  display: block;
+}
+
+.sklmdiv {
+  width: auto;
+  height: auto;
+}
+
+.listdiv {
+  margin: auto;
+  display: block;
+  width: auto;
+  height: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.listdiv p {
+  margin: 10px;
+  padding: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 3px solid white;
+  font-size: 19px;
+  color: yellow;
+  border-radius: 30px;
+  display: inline-block;
+}
+.listdiv p:hover {
+  background-color: #00868b;
+}
+
+.bt:hover {
+  transform: scale(1.1);
+}
+.f {
+  display: none;
+}
+option {
+  color: wheat;
+}
+.lab {
+  box-sizing: border-box;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 20px;
+  transition: all 0.3s;
+  margin-top: 413px;
+  margin-left: -576px;
+}
+
+#username {
+  position: relative;
+  left: -310px;
+}
+.profile_mid div {
+  width: 700px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: inline;
+}
+
+.userpara {
+  display: inline-block;
+  position: relative;
+  top: -39px;
+  left: 789px;
+}
+
+.mp {
+  display: block;
+  height: 755px;
+}
+
+.mainprofile {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editbtn2 {
+  position: relative;
+  height: 25px;
+  width: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  text-align: center;
+  padding-right: 28px;
+  border-radius: 5px;
+}
+.editbtn2 svg path {
+  margin-bottom: 20px;
+  font-size: 10px;
+  height: 25px;
+}
+.editbtn2:hover {
+  transform: scale(1.1);
+}
+
+.editicon {
+  width: 5px;
+  height: 5px;
+}
+
+.progress {
+  width: 200px;
+  height: 20px;
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  bottom: 300px;
+  left: 860px;
+}
+.progress_para {
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  margin-left: 1065px;
+  position: relative;
+  bottom: 332px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding-top: 2px;
+}
+
+.progress_para p {
+  font-size: 15px;
+  color: white;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.progress_info {
+  margin-left: 860px;
+  position: relative;
+  bottom: 287px;
+  font-size: 14.7px;
+}
+
+.container .bt {
+  text-decoration: none;
+  border: none;
+  height: 48px;
+  width: 180px;
+  background-color: #53bcef;
+  border-radius: 15px;
+  color: white;
+  margin-bottom: 30px;
+}
