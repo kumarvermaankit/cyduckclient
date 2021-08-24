@@ -9,8 +9,13 @@ body {
   height: 50px;
   width: 2740px;
   color: white;
+  font-family: "Lora", serif;
 }
-
+#nav_bar div a {
+  margin-top: 2px;
+  top: 1px;
+  padding-bottom: 12px;
+}
 .navlog {
   margin: 5px;
   display: inline-block;
@@ -43,7 +48,7 @@ body {
   position: relative;
   display: inline-block;
   z-index: 5;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .drop {
   background: transparent;
@@ -53,19 +58,24 @@ body {
 }
 
 .username_para {
-  color: #fefc10;
+  /* color: #fefc10; */
+  display: inline-block;
+  color: white;
   font-size: 24px;
   position: relative;
-  left: 680px;
+  /* left: 655px; */
+  /* margin-left: 650px; */
   top: 7px;
+  margin-right: 45px;
 }
 
 .cyducktitle {
   display: inline-block;
   position: relative;
-  right: 100px;
+  right: 75px;
   top: 10px;
   font-size: 30px;
+  font-family: "Candal", serif;
   margin-right: 30px;
 }
 .cyducktitle p {
@@ -93,6 +103,9 @@ body {
   display: inline-block;
   position: relative;
   left: 1350px;
+}
+.dropdown-menu {
+  padding: 0px;
 }
 
 .langpara {
@@ -254,11 +267,9 @@ body {
   color: white;
   padding: 11px 21px 21px 11px;
   height: 50px;
-  float: left;
+  /* float: left; */
   position: relative;
-  left: 50px;
-  /* padding: 5.5px;
-  padding-top: 5px; */
+  right: 50px;
   font-size: 22px;
   text-align: center;
   justify-content: center;

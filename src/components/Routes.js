@@ -19,7 +19,8 @@ import Qcode from "./qcode"
 import Profile from "./Profile"
 
 import Editor from "./codeeditor"
-import CKEditor from "./quillanswer";
+// import CKEditor from "./quillanswer";
+import FAQ from "./faq"
 function Routes(){
 
 return(
@@ -44,13 +45,15 @@ return(
 <AuthenticatedRoute exact path="/file">
   <File />
   </AuthenticatedRoute>
-  <AuthenticatedRoute exact path="/quill">
+  {/* <AuthenticatedRoute exact path="/quill">
   <CKEditor />
-  </AuthenticatedRoute>
+  </AuthenticatedRoute> */}
 <AuthenticatedRoute exact path="/editor">
 <Editor />
 </AuthenticatedRoute>
-
+<AuthenticatedRoute exact path="/faq">
+<FAQ />
+</AuthenticatedRoute>
 <AuthenticatedRoute exact path="/answer/:des/:ans/:state">
   <Answer />
   </AuthenticatedRoute>

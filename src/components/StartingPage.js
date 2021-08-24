@@ -7,13 +7,15 @@ import cyduck from "./circle-cropped2.png"
 import TelegramIcon from '@material-ui/icons/Telegram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-
+import m from "./Drop-it.mp4"
 import TwitterIcon from '@material-ui/icons/Twitter';
-
+import TypeWriter from 'react-typewriter';
 
 import "animate.css"
 
 // import { Animated } from "react-animated-css";
+
+
 
 function StartingPage() {
 
@@ -38,30 +40,37 @@ function StartingPage() {
         <div className="homediv" >
 
             <div className="box">
-                <div className="boxbar">
+               
+              
 
-
-
-                </div>
+                <div className="writer">
               
                
-                <div className="writer">
-                    <h2>We ensure easy clarifications</h2>
-                    <p className="cyduck_desc">Cyduck is a platform which helps various communities of programmers/developers to exchange their doubts/errors with other programmers and faculties who are enthusiastic and dedicated to programming within few steps to obtain desired solution within a limited time frame by providing each other some monitory benefits</p>
+                        <h2 style={{fontSize:"90px"}}>CyDuck</h2>
+                  
+             
+                
+
+                <div className="cyduck_bio">
+                    {/* <h2>We ensure easy clarifications</h2> */}
+                    <p className="cyduck_desc">Cyduck is a developer community to exchange your doubts and thoughts over various challenges and queries on programming along with some monetary benefits.</p>
+                    </div>
                     <form action="" method="get">
                         {tkn === null ? <a className="strlinks" href="/signin"  >Get Started</a> : null}
-                        {tkn !== null ? <a className="strlinks" style={{ paddingLeft: "13px" }} href="/community">Answer a Question</a> : <a className="strlinks2" style={{ paddingTop: "20px", paddingLeft: "13px" }} href="/community">Answer a Question</a>}
+                        {tkn !== null ? <a className="strlinks" style={{ paddingLeft: "13px" }} href="/community">Answer Question</a> : <a className="strlinks2" style={{ paddingTop: "14px", paddingLeft: "13px" }} href="/community">Answer Question</a>}
 
                     </form>
 
                     <a className="strlinks try" href="/file" >Ask Question</a>
                 </div>
+               
 
+ <video className="intro_video" controls="play pause" src={m}  /> 
             </div>
 
             <div className="about-us">
 
-                <ScrollAnimation animateIn="fadeInLeft" duration="2">
+                <ScrollAnimation animateIn="fadeInLeft">
                     <h2>What do we do?</h2>
 
 
@@ -78,8 +87,8 @@ function StartingPage() {
 
             </div>
 
-            <div className="payment">
-                <ScrollAnimation animateIn="fadeInLeft" duration="2" >
+            {/* <div className="payment">
+                <ScrollAnimation animateIn="fadeInLeft"  >
                     <h2>Payment Scheme</h2>
 
                     <div className="paymentcontain">
@@ -122,7 +131,7 @@ function StartingPage() {
                         </div>
                     </div>
                 </ScrollAnimation>
-            </div>
+            </div> */}
 
 
 
@@ -130,18 +139,26 @@ function StartingPage() {
                 <div className="footer">
                     <div className="footer-basic">
                         <footer>
+                            <div className="footer-left">
+                                <p className="fhead">Visit Us: </p>
+                                <p className="fintro">Plot no. 69, Sector-32,
+                                <br/>Gurugram, Haryana-122022</p>
+                                <p className="fhead">Contact Us: </p>
+                                <p className="fintro">+91-9555418627</p>
+                                <p className="fhead">Email Us:</p> 
+                                <p className="fintro">cyduck1@gmail.com</p>
+                            </div>
+                            <div className="footer-right">
+                            <ul className="list-inline">
+                                <li className="list-inline-item"><a href="#">Get in Touch</a></li>
+                            </ul>
                             <div className="social">
                                 <a href="https://t.me/joinchat/xrbUyk1degk5OTll" target="_blank"><i className="icon ion-social-instagram" ><TelegramIcon /></i></a>
                                 <a href="https://www.linkedin.com/company/cyduck/" target="_blank"><i className="icon ion-social-youtube-outline" ><LinkedInIcon /></i></a>
                                 <a ><i className="icon ion-social-twitter" ></i><TwitterIcon /></a>
-                                <a href="#" href="https://discord.gg/XJNPaF4b" target="_blank">Discord</a>
+                                <a href="#" href="https://discord.gg/XJNPaF4b" target="_blank">D</a>
                             </div>
-
-                            <ul className="list-inline">
-                                <li className="list-inline-item"><a href="#">Get in Touch</a></li>
-
-
-                            </ul>
+                            </div>
                             <p className="copyright">Company Name  Cyduck © 2021</p>
                         </footer>
                     </div>

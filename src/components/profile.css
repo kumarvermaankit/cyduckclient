@@ -32,9 +32,9 @@ select {
   background: none;
   color: lightblue;
   margin-bottom: 13px;
-  padding: 4px;
+  padding: 0px 0px 12px 8px;
   width: 220px;
-  height: 32px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #0082e6;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -43,7 +43,7 @@ select {
   display: inline-block;
 }
 .inpt {
-  margin-left: 550px;
+  margin-left: 715px;
   margin-bottom: 20px;
   margin-top: -25px;
 }
@@ -91,8 +91,8 @@ select {
   border-color: #7aa7c7;
   text-align: center;
   padding-top: 6px;
-  border-radius: 15px;
-  margin-left: 700px;
+  border-radius: 12px;
+  left: 900px;
 }
 
 .pswbtn:hover {
@@ -117,24 +117,32 @@ select {
 
 .editbtn {
   position: relative;
-  height: 25px;
-  width: 30px;
-  left: 780px;
-  top: -45px;
+  height: 29px;
+  width: 39px;
+  left: 943px;
+  top: -65px;
   border: none;
-  color: white;
+  color: black;
   text-align: center;
   padding-right: 28px;
   border-radius: 5px;
 }
+#upi {
+  top: -50px;
+}
 
 .l {
   font-size: 20px;
-  position: absolute;
-  left: 530px;
+  /* position: absolute;
+  left: 530px; */
   margin-top: 10px;
 }
-
+.info_col {
+  margin-left: 440px;
+}
+.inf {
+  margin-left: 403px;
+}
 .bt {
   background-color: white;
   color: black;
@@ -149,10 +157,13 @@ select {
 }
 
 .drop_down1 {
-  min-width: 100px;
+  min-width: 0p7x;
   width: auto;
   font-size: 14px;
   color: black;
+  position: relative;
+  bottom: 7.5px;
+  left: 10px;
 }
 
 .bt2 {
@@ -161,7 +172,7 @@ select {
   color: white;
   border: none;
   border-radius: 5px;
-  margin-left: 160px;
+  margin-left: 30px;
 }
 .bt2:hover {
   transform: scale(1.1);
@@ -188,9 +199,10 @@ select {
 
 .skilldiv {
   margin: 20px;
-  margin-left: 500px;
+  margin-left: 600px;
   padding: auto;
   display: block;
+  margin-top: -40px;
 }
 
 .sklmdiv {
@@ -209,21 +221,24 @@ select {
 
 .listdiv p {
   margin: 10px;
-  padding: 18px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 3px solid white;
+  padding: 7px;
+  border: none;
   font-size: 19px;
-  color: yellow;
-  border-radius: 30px;
+  color: black;
+  border-radius: 10px;
   display: inline-block;
+  width: auto;
+  background-color: #cacde0;
+  height: 42px;
 }
 .listdiv p:hover {
-  background-color: #00868b;
+  background-color: #8e909e;
+  color: white;
 }
 
 .bt:hover {
   transform: scale(1.1);
+  background-color: #0077cc;
 }
 .f {
   display: none;
@@ -239,14 +254,21 @@ option {
   border-radius: 10px;
   padding: 5px 20px;
   transition: all 0.3s;
-  margin-top: 413px;
-  margin-left: -576px;
+  margin-top: 420px;
+  margin-left: -670px;
 }
 
 #username {
-  position: relative;
-  left: -310px;
+  /* position: relative;
+  left: -310px; */
+  display: block;
+  margin-right: 20px;
 }
+.profile_mid {
+  margin-top: 20px;
+  height: auto;
+}
+
 .profile_mid div {
   width: 700px;
   margin-top: 40px;
@@ -263,7 +285,7 @@ option {
 
 .mp {
   display: block;
-  height: 755px;
+  height: auto;
 }
 
 .mainprofile {
@@ -348,4 +370,8 @@ option {
   border-radius: 15px;
   color: white;
   margin-bottom: 30px;
+  left: 580px;
+}
+.save-profile {
+  margin-top: 30px;
 }

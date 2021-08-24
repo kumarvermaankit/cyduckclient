@@ -32,6 +32,7 @@ var tkn=localStorage.getItem('usertoken');
 if(tkn!==null){
   const token = localStorage.usertoken
   var decoded=jwt_decode(token)
+  console.log(decoded)
 }
 
 const [lpara,setlpara]=useState(true)
@@ -56,6 +57,7 @@ const [passvalue,setpassvalue]=useState({
 
 
 const [psrc,setpsrc]=useState()
+
   async function Logout(event){
 
 event.preventDefault();
@@ -94,8 +96,11 @@ var l1=window.location
   else if(((l1.toString().substr((l1.toString().length-("/file").length),("/file").length))=="/file" )){
     setcurrentpage("Ask Question")
   }
-  else if(((l1.toString().substr((l1.toString().length-("/editor").length),("/community").length))=="/editor" )){
+  else if(((l1.toString().substr((l1.toString().length-("/editor").length),("/editor").length))=="/editor" )){
     setcurrentpage("Editor")
+  }
+  else if(((l1.toString().substr((l1.toString().length-("/faq").length),("/faq").length))=="/faq" )){
+    setcurrentpage("faq")
   }
   else{
     setcurrentpage("Question")
@@ -346,7 +351,7 @@ event.preventDefault()
 
 
 
-  <Navbar.Brand className="cyducktitle" href="/home" ><p><b>Cy<span>Duck</span></b></p></Navbar.Brand>
+  <Navbar.Brand className="cyducktitle" href="/home" ><p><b>Cy<span>duck</span></b></p></Navbar.Brand>
 
    
 {/* <form className="frm" onSubmit={Search}>
@@ -383,19 +388,24 @@ event.preventDefault()
         </form> */}
       
         {/* { ((l.toString().substr((l.toString().length-("/file").length),("/file").length))!="/file" && (l.toString().substr((l.toString().length-("/file").length),("/file").length))!="/home")? */}
-    <a className={`navitem ${currentpage==="Ask Question"?"navitem_active":null }`} style={{left:"50px"}}  href="/file" >Ask Question</a>
+    {/* <div> */}
+    <a className={`navitem ${currentpage==="Ask Question"?"navitem_active":null }`}   href="/file" >Ask Question</a>
   
 
      {/* { ((l.toString().substr((l.toString().length-("/editor").length),("/editor").length))!="/editor")? */}
-    <a className={`navitem ${currentpage==="Editor"?"navitem_active":null }`} style={{left:"50px"}}  href="/editor" >Editor</a>
+    <a className={`navitem ${currentpage==="Editor"?"navitem_active":null }`}   href="/editor" >Editor</a>
    
 
 
 {/* <div className="currentpage" >{currentpage}</div> */}
    
   {/* { (l.toString().substr((l.toString().length-("/community").length),("/community").length))!="/community" && (l.toString().substr((l.toString().length-("/home").length),("/home").length))!="/home"?  */}
-  <a href="/community" className={`navitem ${currentpage==="Community"?"navitem_active":null }`} style={{left:"50px"}} >Community</a>
-  <p className="username_para">{decoded.data.username}</p>
+  <a href="/community" className={`navitem ${currentpage==="Community"?"navitem_active":null }`}  >Community</a>
+ 
+
+  
+<a className={`navitem ${currentpage==="faq"?"navitem_active":null }`} style={{position:"relative",left:"-50px"}}  href="/faq" >FAQ</a>
+
 {/* 
   {lpara || selected.languages.length===0?<p id="langpara" className="langpara">languages</p>:<p className="langpara1" >languages</p>}
      {fpara || selected.fields.length===0?<p className="fieldpara">fields</p>:<p className="fieldpara1" >fields</p>}
@@ -448,25 +458,14 @@ function BeforeLoginNav(){
       
       
    <div>
-    <a  className="navitem " href="/signin">Signin</a>
-    <a  className="navitem " href="signup">Signup</a>
+    <a  className="navitem" href="/signin">Signin</a>
+    <a  className="navitem" href="signup">Signup</a>
     </div>
     
     
    
  <a  href="/community" className="navitem" >Community</a>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-       
-         
-        
-       
-          
-        </Nav>
-        
-
-      </Navbar.Collapse>
+ 
 {/* 
       {lpara || selected.languages.length===0?<p id="langpara" style={{right:"1142px"}} className="langpara">languages</p>:<p className="langpara1" >languages</p>}
      {fpara || selected.fields.length===0?<p className="fieldpara "  style={{right:"981px"}}>fields</p>:<p className="fieldpara1" >fields</p>}

@@ -153,7 +153,7 @@ useEffect(()=>{
         if(tkn!==null){
             const token = localStorage.usertoken
             setdecoded(jwt_decode(token))
-            
+            console.log(jwt_decode(token))
         }
 
         // document.querySelectorAll(".ql-container").style.border="none"
@@ -213,7 +213,7 @@ async function SendAnswerComment(event,ansindex,index,doc_name){
   console.log(ansindex)
   event.preventDefault()
 
-var val=document.querySelector("#answercomment").value
+var val=document.querySelector(`#answercomment${ansindex}`).value
 console.log(val)
 
   const result=await axios.post(`${url}/upload/answercomment`,{comment:val,useronline:decoded.data.username,index:index,document:doc_name,ansindex:ansindex})
@@ -484,12 +484,12 @@ count++
 
 
 
-
  async function saveinput(doc_name,event,index,comment){
      
-    var val=document.getElementById("comment").value
+  event.preventDefault();  
+  var val=document.getElementById("comment").value
 
-event.preventDefault();
+
     
 
    
@@ -1135,7 +1135,7 @@ return (
 <div className="main_commentdiv">  
     <div id="comments"  className="comment_div"> 
 {/* {commentstate?<h3>Comments:</h3>:null} */}
-<div style={{display:"flex",justifyContent:"space-around",width:"280px",height:"70px"}}>
+<div style={{display:"flex",justifyContent:"space-around",width:"150px",height:"70px"}}>
 <h3 className="comment_header">Comments:</h3>
 <Button  id="comment_btn"   onClick={()=>showcomments(ansarr.comments,ansarr.id)}>
    
@@ -1164,8 +1164,8 @@ return (
 }):null}
 
 { tkn!==null?commentstate?<form className="form_comment" onSubmit={(event)=>saveinput(ansarr.documentname,event,params.index,ansarr.comments)}>
-    <input  type="text"  id="answercomment" placeholder="Add your comment here"/>
-    <button id="cardbtn" type="submit" style={{width:"50px",height:"50px",marginLeft:"10px",bottom:"5px",position:"relative"}} ><AddIcon  /></button>
+    <input  type="text"  id="comment" placeholder="Add your comment here"/>
+    <button id="cardbtn" type="submit" style={{width:"50px",height:"40px",marginLeft:"10px",bottom:"2px",position:"relative"}} ><AddIcon  /></button>
     </form>:null:null}
 
 </div>
@@ -1188,7 +1188,7 @@ return (
     </div>
      
      
-     <button className="send_button" onClick={()=>SendAnswer(ansarr.id,ansarr.documentname,params.index)}>POST</button>
+     <button className="send_button" onClick={()=>SendAnswer(ansarr.id,ansarr.documentname,params.index)}>Post</button>
   
 
      
@@ -1269,7 +1269,7 @@ return (
 })
 
 }
-<input placeholder="Add Comment" id="answercomment"/>
+<input placeholder="Add Comment" className="answercomment" id={`answercomment${ans.index}`}/>
        <button onClick={(event)=>SendAnswerComment(event,ans.index,params.index,ansarr.documentname)} id="cardbtn" type="submit" style={{width:"50px",height:"50px",marginLeft:"10px",bottom:"5px",position:"relative"}} ><AddIcon  /></button>
 </div>
 

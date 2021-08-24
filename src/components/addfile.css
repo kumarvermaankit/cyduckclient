@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oi&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap"); */
 html {
   width: 1000px;
   height: auto;
@@ -570,10 +570,11 @@ input[id="others"] {
 
 .filter_btn {
   position: relative;
-  left: 50px;
+  left: 37px;
+  top: 25px;
   color: white;
   border: none;
-  width: 170px;
+  width: 215px;
   height: 35px;
   border-radius: 10px;
   background: #0095ff;

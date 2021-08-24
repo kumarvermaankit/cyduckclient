@@ -8,13 +8,11 @@ import "./payment.css"
 import {useHistory} from "react-router-dom";
 
 import AlertBox from "./alertbox"
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+
 
 import storage from "./fire_base"
 
-import Spinner from "./Spinner-3.gif"
 
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
 import "react-quill/dist/quill.snow.css";
 
@@ -62,7 +60,10 @@ function File(props){
       other:null
     })
 
-const [imguploadstate,setimguploadstate]=useState(true)
+    const [paymentalertbox,setpaymentalertbox]=useState(false)
+    const [alertmessage,setalertmessage]=useState("")
+
+    const [paymentvalue,setpaymentvalue]=useState()
 
 const [alertbox,setalertbox]=useState(false)
     const [mstate,setmstate]=useState(false)
@@ -193,58 +194,58 @@ seti(false)
 
   
 
-async function Imageupload(event){
+// async function Imageupload(event){
 
 
-var array=[]
+// var array=[]
 
-event.preventDefault();
+// event.preventDefault();
 
-function help(){
+// function help(){
 
-  files.map((each)=>{
+//   files.map((each)=>{
 
 
 
-    const uploadtask=storage.storage().ref(`images/${each.name}`).put(each)
-    uploadtask.on(
-      "state_changed",
-      snapshot=>{},
-        error=>{
-          console.log(error)
-        },
-    ()=>{
-      storage.storage()
-      .ref("images")
-      .child(each.name)
-      .getDownloadURL()
-      .then(imgurl=>{
+//     const uploadtask=storage.storage().ref(`images/${each.name}`).put(each)
+//     uploadtask.on(
+//       "state_changed",
+//       snapshot=>{},
+//         error=>{
+//           console.log(error)
+//         },
+//     ()=>{
+//       storage.storage()
+//       .ref("images")
+//       .child(each.name)
+//       .getDownloadURL()
+//       .then(imgurl=>{
     
     
-    array.push(imgurl)
+//     array.push(imgurl)
     
-    files.unshift()
+//     files.unshift()
     
-      })
-    }
-    )
+//       })
+//     }
+//     )
   
-    })
+//     })
 
-    return true
-}
-
-
-const r=await help();
-
-if(r){
-  setFile([])
-  setquestionimg(array)
-  setimguploadstate(false)
-}
+//     return true
+// }
 
 
-}
+// const r=await help();
+
+// if(r){
+//   setFile([])
+//   setquestionimg(array)
+//   setimguploadstate(false)
+// }
+
+
+// }
 
  
 
@@ -528,7 +529,7 @@ document.body.removeChild(link);
      <div className="flx">
         <button
         className="checkbox_file"
-        style={{backgroundColor:"#ffffff",fontSize:"15px"}}
+        style={{backgroundColor:"green",fontSize:"15px",color:"white"}}
         
           type="button"
           onClick={startRecording}
@@ -541,7 +542,7 @@ document.body.removeChild(link);
         <div className="flx">
         <button
         className="checkbox_file"
-        style={{backgroundColor:"#ffffff",fontSize:"15px"}}
+        style={{backgroundColor:"red",fontSize:"15px",color:"white"}}
           type="button"
           onClick={stopRecording}
           
@@ -602,6 +603,8 @@ function alertclick(event){
   setalertbox(false)
 }
 
+
+
 function Card(props){
   return(
 
@@ -615,12 +618,14 @@ function Card(props){
 <input className="checkbox_file" onChange={(event)=>dropValueGetter(event,1)} type="checkbox" value="java" />
 </div> */}
 
-      <input 
-      onClick={(event)=>razorPayPaymentHandler(event,props.amount)}
+      <input
+      onClick={(event)=>paymentalert(event,props.amount)}
       className="checkbox_file"
-      value={`Rs.${props.amount}` }
+      value={`${props.amount}`}
       style={{marginLeft:"35px"}}
       />
+     
+      
         
         
       
@@ -641,7 +646,7 @@ function Card(props){
 
 async function razorPayPaymentHandler(event,money) {
 event.preventDefault()
- console.log(money)
+
   setload(true)
 
     const API_URL = `${url}/payment/`
@@ -998,6 +1003,46 @@ function AlertBox2(props){
   }
 
 
+
+  function paymentalert(event,a){
+    event.preventDefault();
+    
+console.log(a)
+
+if(a===0){
+  setalertmessage("You can ask your question for free without any time frame")
+  
+}
+
+    if(a==="3"){
+      setalertmessage(<p> 3 /6hr
+
+        For Rs. 3 you can get answer to your question within 6 hours </p>)
+  setpaymentvalue(3)  
+  }
+
+    if(a==="5"){
+      setalertmessage(<p> 5/3 hr
+
+        For Rs. 5 you can get answer to your question within 3 hours </p>)
+          setpaymentvalue(5) 
+    }
+    if(a==="10"){
+      setalertmessage(<p> 10/1 hr
+
+        For Rs. 10 you can get answer to your question within 1 hours </p>)
+          setpaymentvalue(10) 
+    }
+    setpaymentalertbox(true)
+  }
+
+function paymentok(){
+
+}
+
+
+console.log(alertmessage,"ttttt")
+
     return (
 
     
@@ -1006,7 +1051,7 @@ function AlertBox2(props){
       {alertbox?<AlertBox message="First Add Description" click={(event)=>alertclick(event)} />:null}
       {/* <p onClick={(event)=>mainstate(event)}  style={{color:"black",textAlign:"center",marginTop:"20px",cursor:"pointer",fontSize:"60px"}}>Post your Question here</p> */}
       {alertbox2?<AlertBox2  click={()=>setalertbox2(false)} />:null}
-      
+      {paymentalertbox?<AlertBox message={alertmessage}/>:null}
        {/* {mstate?  */}
          <div className="inputdiv">
     <form action="#">
@@ -1174,7 +1219,7 @@ function AlertBox2(props){
      
 */}
    
-<button onClick={send}  className="send-button" >POST</button> 
+<button onClick={send}  className="send-button" >Post</button> 
            
             </div>
        
