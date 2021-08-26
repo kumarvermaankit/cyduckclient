@@ -26,9 +26,9 @@ const [progress,setprogress]=useState(false)
    return (
      <>
        <Editor
-         placeholder="This is the initial content of the editor"
+         
          onInit={(evt, editor) => editorRef.current = editor}
-         initialValue="<p>This is the initial content of the editor.</p>"
+         initialValue="<p>Write your code and description here.....</p>"
          apiKey="fyjz4it8ex5trli9saxg0iinhvvetjkqvghmr4n7u0vc79fd"
          value={props.t}
          onChange={log} 

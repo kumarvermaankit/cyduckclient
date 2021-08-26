@@ -246,11 +246,11 @@ async function profilehelp(){
             function Imagewindow(){
 
                 return(
-                  <div style={{display:"flex",marginTop:"20px"}}>
-                  <label  htmlFor="pro" className="custom-file-upload"  style={{height:"20px",marginRight:"20px",fontSize:"10px"}}>Select</label>
+                  <div className="imagewindow">
+                  <label  htmlFor="pro" className="custom-file-upload"  style={{height:"20px",fontSize:"10px"}}><ImageSearchIcon /></label>
                     <input type="file" id="pro" onChange={(event)=>Setprofile(event)}/>
                     
-                    <button style={{color:"black",marginTop:"7px",fontSize:"25px"}} onClick={()=>sendimage()}>Upload</button>
+                    <button style={{color:"black",fontSize:"10px",position:"relative",left:"10px",top:"2px"}} onClick={()=>sendimage()}>Upload</button>
                   </div>
                 )
                 
@@ -488,8 +488,8 @@ return(
 
         <div style={{display:"flexbox"}}>
         <input className="inpt f" type="file" accept="image/*" />
-      {tkn!==null?decoded.data.username===params.username?<label for="file" className="lab" onClick={openwindow}><ImageSearchIcon /></label>:null:null}
-{myw?<Imagewindow />:null}
+      {/* {tkn!==null?decoded.data.username===params.username?<label for="file" className="lab" onClick={openwindow}><ImageSearchIcon /></label>:null:null} */}
+<Imagewindow />
 </div>
 </div>
 <p className="progress_info">{anslength-info.answered.length} questions to reach next level</p>

@@ -142,7 +142,7 @@ return(
       <input id="inputelement2" className="signinput" type="password" name="password" value={userP.password} onChange={(event)=>OnChange(event,0)} required="true" autoComplete="off"/>
   </div>
   <div>
-      {signpara?<p className="cred">Password and Email does not match are</p>:null}
+      {signpara?<p className="cred">Password and Email does not match </p>:null}
   </div>
   <div >
       <button className=" signinput" id="signbutton" type="submit" classname="btn btn-primary"><h3><b>LOGIN</b></h3></button>

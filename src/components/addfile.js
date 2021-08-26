@@ -424,11 +424,13 @@ else{
 
 function Player({ srcBlob, audio }) {
 
-
-
+  console.log(audio)
+  console.log(srcBlob)
   if (!srcBlob) {
     return null;
   }
+
+
 
   if (audio) {
     return <audio src={URL.createObjectURL(srcBlob)} controls />;
@@ -483,7 +485,7 @@ function Recorder() {
   });
   const [recorderstate,setrecorderstate]=useState(false)
 
-console.log(mediaBlob)
+
 
 function clickHandler(event){
   event.preventDefault()
@@ -493,7 +495,7 @@ function clickHandler(event){
   setblob(mediaBlob)
   setalertbox2(true)
 }
-console.log(recorderstate)
+
 
 function handleClick(event){
   console.log(event)
@@ -501,14 +503,7 @@ function handleClick(event){
   recorderstate?setrecorderstate(false):setrecorderstate(true)
 }
 
-function download(event,blob){
-  event.preventDefault()
-  const link = document.createElement('a');
-link.href = URL.createObjectURL(blob);
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-}
+
 
 
 
@@ -546,13 +541,13 @@ document.body.removeChild(link);
           type="button"
           onClick={stopRecording}
           
-          disabled={status !== 'recording'}
+          
         >
           Stop recording
         </button>
         </div>
       </section>
-      <P srcBlob={mediaBlob} />
+      <P srcBlob={mediaBlob}/>
      {/* <button onClick={(event)=>download(event,mediaBlob)}>Download</button> */}
      </div>:null}
     </article>
@@ -994,11 +989,22 @@ console.log(blob)
 
 function AlertBox2(props){
 
+  function download(event,blob){
+    event.preventDefault()
+    const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  }
+
   return(
       <div className="alert">
-      <div className="alertbox">
+      <div className="alertbox2">
           <Player srcBlob={blob} />
-          <button className="ok_btn2" onClick={props.click}>OK</button>
+          <button className="ok_btn" style={{width:"100px"}} onClick={(event)=>download(event,blob)}>Download</button>
+          <button className="ok_btn" style={{left:"170px"}} onClick={props.click}>OK</button>
+        
           {/* <a href={URL.createObjectURL(blob)} download> Download </a> */}
       </div>
       </div>
