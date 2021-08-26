@@ -623,6 +623,7 @@ function Card(props){
       className="checkbox_file"
       value={`${props.amount}`}
       style={{marginLeft:"35px"}}
+      readOnly={true}
       />
      
       
@@ -644,8 +645,8 @@ function Card(props){
 
 
 
-async function razorPayPaymentHandler(event,money) {
-event.preventDefault()
+async function razorPayPaymentHandler(money) {
+
 
   setload(true)
 
@@ -696,7 +697,11 @@ event.preventDefault()
 
 
 
-
+function paymentok(){
+  setpaymentalertbox(false)
+  razorPayPaymentHandler(paymentvalue)
+  setpaymentstate(false)
+}
 
 
    
@@ -1006,8 +1011,8 @@ function AlertBox2(props){
 
   function paymentalert(event,a){
     event.preventDefault();
-    
-console.log(a)
+    setpaymentstate(false)
+
 
 if(a===0){
   setalertmessage("You can ask your question for free without any time frame")
@@ -1015,30 +1020,28 @@ if(a===0){
 }
 
     if(a==="3"){
-      setalertmessage(<p> 3 /6hr
+      setalertmessage(<p> 3 /6hr:
 
-        For Rs. 3 you can get answer to your question within 6 hours </p>)
+        For Rs. 3 you can get answer to your question within 6 hours otherwise your amount will be refunded automatically within next 2 days </p>)
   setpaymentvalue(3)  
   }
 
     if(a==="5"){
-      setalertmessage(<p> 5/3 hr
+      setalertmessage(<p> 5/3 hr:
 
-        For Rs. 5 you can get answer to your question within 3 hours </p>)
+        For Rs. 5 you can get answer to your question within 3 hours otherwise your amount will be refunded automatically within next 2 days  </p>)
           setpaymentvalue(5) 
     }
     if(a==="10"){
-      setalertmessage(<p> 10/1 hr
+      setalertmessage(<p> 10/1 hr:
 
-        For Rs. 10 you can get answer to your question within 1 hours </p>)
+        For Rs. 10 you can get answer to your question within 1 hours otherwise your amount will be refunded automatically within next 2 days  </p>)
           setpaymentvalue(10) 
     }
     setpaymentalertbox(true)
   }
 
-function paymentok(){
 
-}
 
 
 console.log(alertmessage,"ttttt")
@@ -1051,7 +1054,7 @@ console.log(alertmessage,"ttttt")
       {alertbox?<AlertBox message="First Add Description" click={(event)=>alertclick(event)} />:null}
       {/* <p onClick={(event)=>mainstate(event)}  style={{color:"black",textAlign:"center",marginTop:"20px",cursor:"pointer",fontSize:"60px"}}>Post your Question here</p> */}
       {alertbox2?<AlertBox2  click={()=>setalertbox2(false)} />:null}
-      {paymentalertbox?<AlertBox message={alertmessage}/>:null}
+      {paymentalertbox?<AlertBox message={alertmessage} click={()=>paymentok()} />:null}
        {/* {mstate?  */}
          <div className="inputdiv">
     <form action="#">
@@ -1124,6 +1127,7 @@ console.log(alertmessage,"ttttt")
       className="checkbox_file"
       value="Free Free Free"
       style={{marginLeft:"35px"}}
+      readOnly={true}
       />
       </div>
        

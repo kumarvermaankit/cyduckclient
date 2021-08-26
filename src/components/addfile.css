@@ -54,16 +54,18 @@ input[type="file"] {
   width: 300px;
 
   height: auto;
-  border-radius: 10px;
+  border-radius: 5px;
   position: relative;
-  left: 450px;
-  top: 80px;
+  left: 550px;
+  top: 120px;
 
   color: black;
-  /* text-align: center;
-  align-items: center;
-  justify-content: center; */
+  text-align: center;
+  /* align-items: center; */
+  justify-content: space-around;
+  background-color: #dddddd;
   z-index: 250;
+  padding-bottom: 10px;
 }
 
 .alertbox2 {
@@ -323,7 +325,7 @@ img {
   animation-name: sopen;
   animation-duration: 0.5s;
   width: 220px;
-  max-height: 100px;
+  max-height: 103px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -333,7 +335,7 @@ img {
     height: 0px;
   }
   to {
-    height: 100px;
+    height: 115px;
   }
 }
 
