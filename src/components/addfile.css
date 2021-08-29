@@ -208,6 +208,13 @@ input[type="file"] {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.alert2 {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  z-index: 250;
+}
+
 .ok_btn {
   width: 60px;
   color: black;
@@ -482,7 +489,7 @@ img {
   color: white;
   background-color: #0095ff;
   position: relative;
-  left: 1235px;
+  left: 555px;
   bottom: 60px;
   width: 218px;
   height: 54px;

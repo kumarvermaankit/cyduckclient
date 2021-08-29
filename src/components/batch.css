@@ -1,0 +1,123 @@
+.boxes {
+  width: 1420px;
+  height: auto;
+  margin: 30px 20px;
+}
+.box2 {
+  height: 327px;
+  background-color: transparent;
+}
+.giphy-embed {
+  position: relative;
+  left: 460px;
+  bottom: 190px;
+}
+
+.card-box {
+  margin: 40px 144px;
+  width: 370px;
+  height: 227px;
+  background-color: white;
+  float: left;
+  border-radius: 18px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  transition: 0.5s ease;
+}
+
+.card-box:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  transform: scale(1.09);
+}
+
+.card-box .card-title {
+  width: 346px;
+  height: 30px;
+  margin: auto;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.card-box .card-text {
+  width: 346px;
+  height: 121px;
+  margin: 17px auto 8px auto;
+  line-height: 30px;
+  font-size: 23px;
+  font-family: "Candal", serif;
+}
+
+.card-box .card-btn {
+  width: 370px;
+  height: 52px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.card-box button {
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card-box .card-title1 {
+  color: rgb(254, 183, 36);
+}
+
+.card-box .card-btn1 {
+  background: rgb(254, 183, 36);
+  border-color: rgb(254, 183, 36);
+}
+
+.card-box .card-btn1:hover {
+  background: #fff;
+  color: rgb(254, 183, 36);
+  border: 3px solid rgb(254, 183, 36);
+}
+
+.card-box .card-title2 {
+  color: rgb(249, 129, 70);
+}
+
+.card-box .card-btn2 {
+  background: rgb(249, 129, 70);
+  border-color: rgb(249, 129, 70);
+}
+
+.card-box .card-btn2:hover {
+  background: #fff;
+  color: rgb(249, 129, 70);
+  border: 3px solid rgb(249, 129, 70);
+}
+
+.card-box .card-title3 {
+  color: rgb(2, 187, 115);
+}
+
+.card-box .card-btn3 {
+  background: rgb(2, 187, 115);
+  border-color: rgb(2, 187, 115);
+}
+
+.card-box .card-btn3:hover {
+  background: #fff;
+  color: rgb(2, 187, 115);
+  border: 3px solid rgb(2, 187, 115);
+}
+
+.card-box .card-title4 {
+  color: rgb(83, 188, 237);
+}
+
+.card-box .card-btn4 {
+  background: rgb(83, 188, 237);
+  border-color: rgb(83, 188, 237);
+}
+
+.card-box .card-btn4:hover {
+  background: #fff;
+  color: rgb(83, 188, 237);
+  border: 3px solid rgb(83, 188, 237);
+}

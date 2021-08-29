@@ -21,6 +21,7 @@ import Profile from "./Profile"
 import Editor from "./codeeditor"
 // import CKEditor from "./quillanswer";
 import FAQ from "./faq"
+import Batch from "./batch"
 function Routes(){
 
 return(
@@ -44,6 +45,9 @@ return(
 </Route>
 <AuthenticatedRoute exact path="/file">
   <File />
+  </AuthenticatedRoute>
+  <AuthenticatedRoute exact path="/batch">
+  <Batch />
   </AuthenticatedRoute>
   {/* <AuthenticatedRoute exact path="/quill">
   <CKEditor />

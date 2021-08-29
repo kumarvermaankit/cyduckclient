@@ -17,10 +17,13 @@ import storage from "./fire_base"
 import "react-quill/dist/quill.snow.css";
 
 import Tinymce from "./tinymce";
-// import Recorder from "./recorder";
+
 import useMediaRecorder from '@wmik/use-media-recorder';
 
+import Batch from "./batch";
 var quillObj
+
+
 function File(props){
 
 
@@ -31,12 +34,12 @@ function File(props){
  
   var [i,seti]=useState(false)
     const [files,setFile]=useState([]);
-    const [bstate,setbstate]=useState(false);
+ 
     const [paymentstate,setpaymentstate]=useState(false)
     const [noi,setnoi]=useState([])
     const [imgstate,setimagestate]=useState(false)
     const [alertbox2,setalertbox2]=useState(false)
-    const [istate,setistate]=useState(false)
+    
     const [cstate,setcstate]=useState(false);
     const[question,setquestion]=useState({
 
@@ -59,7 +62,7 @@ function File(props){
       codeeditor:null,
       other:null
     })
-
+    
     const [paymentalertbox,setpaymentalertbox]=useState(false)
     const [alertmessage,setalertmessage]=useState("")
 
@@ -76,6 +79,8 @@ const [alertbox,setalertbox]=useState(false)
 const [selectedlang,setselectedlang]=useState([])
 const [selectedfram,setselectedfram]=useState([])
 const [selectedfield,setselectedfield]=useState([])
+
+
 
 
     const [info,setinfo]=useState({
@@ -148,7 +153,7 @@ linkstate?setlinkstate(false):setlinkstate(true)
    
 
 
-
+   
 
 
 
@@ -182,8 +187,7 @@ event.preventDefault()
     reader.readAsDataURL(selectedFile);
 
    
-    setbstate(true);
-seti(false)
+ 
 
 
 
@@ -251,17 +255,26 @@ seti(false)
 
 
 
+function proceed(event){
+
+event.preventDefault()
+
+  if(question.title===""){
+  
+    setalertbox(true)
+    
+      return;
+    }
+
+    setpaymentalertbox(true)
+}
+
 
     const send= async event=>{
    
      
   
- if(question.title===""){
-  
- setalertbox(true)
- 
-   return;
- }
+
 
       // const r=await axios.post(`${url}/upload`,data)
     
@@ -1014,6 +1027,16 @@ function AlertBox2(props){
   }
 
 
+function AlertBox3(){
+  return(
+    <div className="alert2">
+    <Batch cancel={setpaymentalertbox} send={send} load={load} paymenthandler={razorPayPaymentHandler}/>
+    </div>
+  )
+}
+
+console.log(paymentstate)
+
 
   function paymentalert(event,a){
     event.preventDefault();
@@ -1050,7 +1073,7 @@ if(a===0){
 
 
 
-console.log(alertmessage,"ttttt")
+
 
     return (
 
@@ -1060,7 +1083,8 @@ console.log(alertmessage,"ttttt")
       {alertbox?<AlertBox message="First Add Description" click={(event)=>alertclick(event)} />:null}
       {/* <p onClick={(event)=>mainstate(event)}  style={{color:"black",textAlign:"center",marginTop:"20px",cursor:"pointer",fontSize:"60px"}}>Post your Question here</p> */}
       {alertbox2?<AlertBox2  click={()=>setalertbox2(false)} />:null}
-      {paymentalertbox?<AlertBox message={alertmessage} click={()=>paymentok()} />:null}
+
+      {paymentalertbox?<AlertBox3 />:null}
        {/* {mstate?  */}
          <div className="inputdiv">
     <form action="#">
@@ -1121,36 +1145,6 @@ console.log(alertmessage,"ttttt")
 </div>:null}
 </div>
 
-<div className="keyword_div">
-
-<div>
-<div>
-  <button  className="keyword_btn" onClick={(event)=>Paystate(event)} >Payments</button>
-{paymentstate?<div className="keyword_containerdiv">
-    <div className="flx">
-     <input 
-     onClick={(event)=>{event.preventDefault()}}
-      className="checkbox_file"
-      value="Free Free Free"
-      style={{marginLeft:"35px"}}
-      readOnly={true}
-      />
-      </div>
-       
-  <Card  amount="3"  hours="6"/>
-  <Card   amount="5"  hours="3"/>
-  <Card  amount="10" hours="1"/>
-
-
-  
-    </div>:null}
-    </div>
-    {/* {load!==undefined?load?<img className="loading"  style={{backgroundColor:"transparent"}} src={Spinner}/>:<CheckCircleIcon style={{height:"60px",width:"60px"}} className="loading"/>:null} */}
-</div>
-
-
-
-</div>
 
 <Recorder />
 {/* 
@@ -1229,7 +1223,7 @@ console.log(alertmessage,"ttttt")
      
 */}
    
-<button onClick={send}  className="send-button" >Post</button> 
+<button onClick={(event)=>proceed(event)} style={{left:"1235px"}}  className="send-button" >Proceed</button> 
            
             </div>
        
