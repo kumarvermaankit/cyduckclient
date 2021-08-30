@@ -26,7 +26,7 @@ export default function Batch(props) {
 							<button class="card-btn card-btn2" onClick={()=>props.paymenthandler(3)}>Pay</button>
 			</div>
 		</div>
-		<div class="box">
+		<div class="box2">
 			<div class="card-box">
 				<h3 class="card-title card-title3">Rs 5/-</h3>
 					<p class="card-text">

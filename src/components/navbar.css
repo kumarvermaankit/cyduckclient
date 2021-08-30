@@ -49,6 +49,7 @@ body {
   display: inline-block;
   z-index: 5;
   margin-top: 20px;
+  outline: none;
 }
 .drop {
   background: transparent;

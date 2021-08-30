@@ -1220,13 +1220,13 @@ return (
        </div>
        
        <div style={{display:"flex",width:"200px"}} className="like">
-        <label style={{fontSize:"18px",marginLeft:"15px"}}>Pay her/him</label>
+        <label style={{fontSize:"18px",marginLeft:"15px"}}></label>
         {tkn!==null?decoded.data.username===ansarr.username?
          <div id={ans._id} style={{cursor:"pointer",color:"#000000"}} onClick={(event)=>Votes(ans._id,ansarr.documentname,params.index,ans.vote,ans.index,event)} >
         
-         {vote[ans._id]===undefined?ans.vote?<FavoriteIcon style={{width:"30px",height:"30px"}}/>:<FavoriteBorderIcon style={{width:"30px",height:"30px"}}/>:vote[ans._id]?<FavoriteIcon style={{width:"20px",height:"20px"}}/>:<FavoriteBorderIcon style={{width:"20px",height:"20px"}}/>}
+         {vote[ans._id]===undefined?ans.vote?<button className="accepted">Accepted</button>:<button className="accept">Accept</button>:vote[ans._id]?<button className="accepted">Accepted</button>:<button className="accept" >Accept</button>}
        
-         
+         {/* <FavoriteIcon style={{width:"30px",height:"30px"}}/> */}
           </div>:null:null
        }
 </div>

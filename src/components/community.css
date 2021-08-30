@@ -940,3 +940,13 @@ rect:hover {
 .e_comment {
   margin-left: 10px;
 }
+.accept {
+  transform: scale(2);
+  background-color: red;
+  margin-left: 15px;
+}
+.accepted {
+  transform: scale(2);
+  background-color: green;
+  margin-left: 15px;
+}

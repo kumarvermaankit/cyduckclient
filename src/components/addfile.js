@@ -1006,6 +1006,7 @@ function AlertBox2(props){
     event.preventDefault()
     const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
+  link.target="blank"
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
