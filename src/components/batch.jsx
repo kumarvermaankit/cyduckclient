@@ -42,7 +42,7 @@ export default function Batch(props) {
 			<button class="card-btn card-btn4" onClick={()=>props.paymenthandler(10)}>Pay</button>
 			
 			</div>
-			{props.load?<iframe src={Loading} width="380" height="380" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>:<button className="send-button">POST</button>}
+			{props.load?<iframe src={Loading} width="380" height="380" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>:<button onClick={()=>props.send()} className="send-button">POST</button>}
 			
 			{/* "https://giphy.com/embed/3oEjI6SIIHBdRxXI40" */}
 		</div>
