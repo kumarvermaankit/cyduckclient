@@ -737,7 +737,7 @@ rect:hover {
 }
 .form_comment {
   position: relative;
-  bottom: 40px;
+  bottom: 0px;
   height: 53px;
   left: 10px;
 }

@@ -1163,7 +1163,7 @@ return (
     )
 }):null}
 
-{ tkn!==null?commentstate?<form className="form_comment" onSubmit={(event)=>saveinput(ansarr.documentname,event,params.index,ansarr.comments)}>
+{ tkn!==null?commentstate?<form className="form_comment"  onSubmit={(event)=>saveinput(ansarr.documentname,event,params.index,ansarr.comments)}>
     <input  type="text"  id="comment" placeholder="Add your comment here"/>
     <button id="cardbtn" type="submit" style={{width:"50px",height:"40px",marginLeft:"10px",bottom:"2px",position:"relative"}} ><AddIcon  /></button>
     </form>:null:null}

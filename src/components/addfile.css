@@ -219,7 +219,7 @@ input[type="file"] {
   width: 60px;
   color: black;
   position: relative;
-
+  top: 50px;
   background-color: #d4d1b5;
   margin-left: 20px;
 }
