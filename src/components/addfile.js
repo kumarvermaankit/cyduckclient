@@ -525,7 +525,7 @@ function handleClick(event){
     <article>
      
      <button className="keyword_btn" style={{marginLeft:"35px"}} onClick={(event)=>handleClick(event)}>Screen Recorder</button>
-  {recorderstate?<div className="keyword_containerdiv" style={{marginLeft:"35px"}}>
+  {recorderstate?<div className="keyword_containerdiv" style={{marginLeft:"35px",overflowY:"hidden"}}>
   {/* <div className="flx">
       {error ? `${status} ${error.message}` : status}
       </div> */}
@@ -537,7 +537,7 @@ function handleClick(event){
      <div className="flx">
         <button
         className="checkbox_file"
-        style={{backgroundColor:"green",fontSize:"15px",color:"white"}}
+        style={{backgroundColor:"green",fontSize:"15px",color:"white",marginLeft:"20px"}}
         
           type="button"
           onClick={startRecording}
@@ -550,7 +550,7 @@ function handleClick(event){
         <div className="flx">
         <button
         className="checkbox_file"
-        style={{backgroundColor:"red",fontSize:"15px",color:"white"}}
+        style={{backgroundColor:"red",fontSize:"15px",color:"white",marginLeft:"20px"}}
           type="button"
           onClick={stopRecording}
           
@@ -1146,8 +1146,11 @@ if(a===0){
 </div>:null}
 </div>
 
-
+<div>
+<h3 style={{fontSize:"13px",marginLeft:"40px"}}>Click Twice to Open</h3>
 <Recorder />
+</div>
+
 {/* 
     <MultiSelect
         className="drop-down"

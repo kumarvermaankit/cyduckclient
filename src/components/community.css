@@ -127,7 +127,7 @@ a {
   position: relative;
 
   display: flex;
-  left: 930px;
+  left: 900px;
   bottom: 40px;
 }
 
@@ -212,6 +212,7 @@ a {
   color: rgb(129, 129, 129);
   position: relative;
   margin-left: 150px;
+  width: 200px;
 }
 
 .questionid {
@@ -869,7 +870,7 @@ rect:hover {
   position: relative;
   /* bottom: 25px; */
   left: 710px;
-  bottom: 10px;
+  bottom: 30px;
 }
 
 .community_timer2 {
@@ -886,16 +887,24 @@ rect:hover {
   border: none;
   font-size: 14px;
   z-index: 250;
-  margin-left: 150px;
-  margin-top: 6px;
+  margin-left: 142px;
+  margin-top: 42px;
 }
 .vote:hover {
   color: #0077cc;
 }
 
+.batch {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 10px;
+  right: 80px;
+}
+
 .no_of_votes {
   position: relative;
-  top: 12px;
+  top: 50px;
   left: 30px;
   font-size: 38px;
   z-index: 250;

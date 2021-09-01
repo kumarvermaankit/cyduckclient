@@ -140,14 +140,16 @@ function StartingPage() {
                     <div className="footer-basic">
                         <footer>
                             <div className="footer-left">
+                                <div className="addf">
                                 <p className="fhead">Visit Us: </p>
                                 <p className="fintro">Plot no. 69, Sector-32,
-                                <br/>Gurugram, Haryana-122022</p>
-                                <p className="fhead">Contact Us: </p>
-                                <p className="fintro">+91-9555418627</p>
-                                <p className="fhead">Email Us:</p> 
-                                <p className="fintro">cyduck1@gmail.com</p>
+                                <br/>Gurugram, Haryana-122022</p></div>
+                                <div className="addf"> <p className="fhead">Contact Us: </p>
+                                <p className="fintro">+91-9555418627</p></div>
+                                <div className="addf"><p className="fhead">Email Us:</p> 
+                                <p className="fintro">cyduck1@gmail.com</p></div>
                             </div>
+              
                             <div className="footer-right">
                             <ul className="list-inline">
                                 <li className="list-inline-item"><a href="#">Get in Touch</a></li>

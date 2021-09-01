@@ -21,7 +21,7 @@ function FAQ_APP(){
         },
         {
             question: 'How to ask a question?',
-            answer: <p className="ans"> <b>Step1:</b> visit <b>ask_question_page_link</b>
+            answer: <p className="ans"> <b>Step1:</b> visit <b><a style={{color:"black"}} href="/file" >ask question</a></b>
             <br/><b>Step2:</b> Write a title as a summary of your doubt.
             <br/><b>Step3:</b> Write a description of your problem/doubt/error with code and links or you can use a screen recording option and explain your question as in your words or you can use both.
             <br/><b>Step4:</b> Add tags and keywords related to your question.

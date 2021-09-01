@@ -11,7 +11,9 @@ import  {useHistory } from 'react-router-dom'
 
 import Search from "./search";
 import {format} from "timeago.js"
-
+import gold from "./goldl2x.png"
+import silver from "./silverl2x.png"
+import bronze from "./bronzel2x.png"
 
 
 
@@ -329,14 +331,14 @@ function Quesdiv(props){
 
 return(
 
-    
+   <div style={{display:"flex"}}>
     <div id={props.i}  key={props.i}  className="headercard" >
 
 
        
-  <a href={`/ques/${props.index}/${props.doc_name}/${props.u}`}><b><p style={{color:"black"}}>{props.t.substring(0,100)}</p></b><Card.Text className="username1">Asked By {props.u}</Card.Text><Card.Text  className="date">{props.create!==null?format(props.create):"July 2021"}</Card.Text></a>
+  <a href={`/ques/${props.index}/${props.doc_name}/${props.u}`}><b><p style={{color:"black",width:"450px"}}>{props.t.substring(0,100)}</p></b><p className="username1">Asked By {props.u}</p><p  className="date">{props.create!==null?format(props.create):"July 2021"}</p>  </a>
 
-  
+
  {CD?<Countdown  time={props.time} d={props.doc_name} idx={props.index} />:null}
  
 
@@ -345,6 +347,8 @@ return(
 {/* {(props.doc_name==="bronze")?<img  class="card_img1" src={one}/>:(props.doc_name==="silver")?<img class="card_img1" src={five}/>:(props.doc_name==="gold")?<img  class="card_img1" src={five}/>:(props.doc_name==="extra")?<img  class="card_img1"  src={null}/>:null} */}
 
  </div>
+ <img className="batch" src={props.doc_name==="gold"?gold:props.doc_name==="silver"?silver:props.doc_name==="bronze"?bronze:null}/>
+ </div> 
 )
 }
 

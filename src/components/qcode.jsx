@@ -1232,11 +1232,11 @@ return (
 </div>
        
        {tkn!==null?<div className="up_down_vote">
-      {ans.likedBy.includes(decoded.data.username)===false?<button className="vote" id={ans._id} onClick={(event)=>Upvote(ansarr.documentname,params.index,ans.index,true,ans.upvote,ans._id,event)}><ThumbUpIcon style={{width:"40px",height:"60px"}} /></button>
+      {ans.likedBy.includes(decoded.data.username)===false?<button className="vote" style={{marginTop:decoded.data.username===ansarr.username?"15px":"45px"}} id={ans._id} onClick={(event)=>Upvote(ansarr.documentname,params.index,ans.index,true,ans.upvote,ans._id,event)}><ThumbUpIcon style={{width:"40px",height:"60px"}} /></button>
         :
-        <button className="vote" id={ans._id} onClick={(event)=>Upvote(ansarr.documentname,params.index,ans.index,false,ans.upvote,ans._id,event)}><ThumbDownIcon style={{width:"40px",height:"60px"}} /></button>}
+        <button className="vote" style={{marginTop:decoded.data.username===ansarr.username?"15px":"45px"}} id={ans._id} onClick={(event)=>Upvote(ansarr.documentname,params.index,ans.index,false,ans.upvote,ans._id,event)}><ThumbDownIcon style={{width:"40px",height:"60px"}} /></button>}
        
-         <p className="no_of_votes" >{ans.upvote}</p>
+         <p className="no_of_votes" style={{top:decoded.data.username===ansarr.username?"20px":"50px",left:decoded.data.username===ansarr.username?"30px":"30px"}} >{ans.upvote}</p>
        </div>:null}
        <div className="ediv">
         
