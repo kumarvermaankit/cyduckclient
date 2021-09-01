@@ -520,7 +520,7 @@ return(
         labelledBy={"skills"}
         required={true}
       />:null}
-         {sl?<button className="bt2" onClick={(event)=>Addskill(event)}><CheckCircleIcon style={{width:"30px",height:"30px"}} /></button>:null}
+         {sl?<button className="bt2" style={{marginLeft:"20px"}} onClick={(event)=>Addskill(event)}><CheckCircleIcon style={{width:"30px",height:"30px"}} /></button>:null}
          
 </div>
 
@@ -585,18 +585,18 @@ return(
    {pfield===false?
    <div className="pswdiv">
         <label className="l" for="oldpassword">Current Password : </label>
-        <input  className="pswinput" id="oldpassword" type="password" placeholder="Current Password" required={true}/>
+        <input  className="pswinput"  id="oldpassword" type="password" placeholder="Current Password" required={true}/>
         <button className="bt2" onClick={(event)=>Pswrdchecker(event)}><CheckCircleIcon style={{width:"23px",height:"23px"}}  /></button>
         </div>
    :null}
         
        { pfield?<div>
-        <div className="pswdiv">
-        <label className="l" style={{top:"7px"}} for="password">New Password : </label>
-        <input  className="pswinput"  id="password" type="text" placeholder="New Password" required={true} />
+        <div className="pswdiv" >
+        <label className="l" style={{top:"0px"}} for="password">New Password : </label>
+        <input  className="pswinput" style={{left:"60px"}}  id="password" type="text" placeholder="New Password" required={true} />
         </div>
-        <div className="pswdiv">
-        <label className="l" style={{top:"7px"}}  for="confirmpassword">Confirm Password : </label>
+        <div className="pswdiv" style={{marginLeft:"270px"}}>
+        <label className="l" style={{top:"0px"}}  for="confirmpassword">Confirm Password : </label>
         <input  className="pswinput"  id="confirmpassword"  type="text" placeholder="Confirm Password" required={true}/>
         </div>
         {pswlength?<p style={{marginLeft:"280px",marginTop:"20px",color:"red"}}>Password length should be greater than 5 characters</p>:null}
