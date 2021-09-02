@@ -65,9 +65,9 @@ return(
   <AuthenticatedRoute exact path="/codemirror">
   <CodeM />
   </AuthenticatedRoute>
- <AuthenticatedRoute exact path="/search/:languages/:fields/:frameworks/:string">
+ <Route exact path="/search/:languages/:fields/:frameworks/:string">
    <Searching />
- </AuthenticatedRoute>
+ </Route>
  <AuthenticatedRoute exact path="/myq">
    <MyQuestions/>
  </AuthenticatedRoute>
