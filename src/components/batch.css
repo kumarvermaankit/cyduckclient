@@ -9,8 +9,15 @@
 }
 .giphy-embed {
   position: relative;
-  left: 460px;
-  bottom: 190px;
+  left: 370px;
+  bottom: 100px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.shrinkToFit {
+  width: 300px;
+  height: 300px;
 }
 
 .card-box {
@@ -120,4 +127,7 @@
   background: #fff;
   color: rgb(83, 188, 237);
   border: 3px solid rgb(83, 188, 237);
+}
+#closeIcon :hover {
+  background-color: red;
 }

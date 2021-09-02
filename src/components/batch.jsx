@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import "./batch.css";
 
-import Loading from "./loading-14.gif"
+import Loading from "./Glass_lines.gif"
+
+// import Loading from "./loading-14.gif"
+import CloseIcon from '@material-ui/icons/Close';
 
 export default function Batch(props) {
+
+const [bgclr,setbgclr]=useState("red")
+
+function mouseUp(){
+	setbgclr("green")
+}
+function mouseDown(){
+	setbgclr("red")
+}
     return (
         <div class="boxes" id="card">
 		
 		<div class="box2">
-		<button onClick={()=>props.cancel(false)}>Cancel</button>
+		<button style={{backgroundColor:"transparent",border:"none"}} onMouseUp={mouseDown} onMouseDown={mouseUp} onClick={()=>props.cancel(false)}><CloseIcon  style={{backgroundColor:bgclr}}  /></button>
 			<div class="card-box">
 				<h3 class="card-title card-title1">Free</h3>
 					<p class="card-text card-text1">
@@ -42,7 +54,8 @@ export default function Batch(props) {
 			<button class="card-btn card-btn4" onClick={()=>props.paymenthandler(10)}>Pay</button>
 			
 			</div>
-			{props.load?<iframe src={Loading} width="380" height="380" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>:<button onClick={()=>props.send()} className="send-button">POST</button>}
+			<button onClick={()=>props.send()} className="send-button">POST</button>
+			{props.load?<iframe src={Loading} width="180" height="80" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>:null}
 			
 			{/* "https://giphy.com/embed/3oEjI6SIIHBdRxXI40" */}
 		</div>
