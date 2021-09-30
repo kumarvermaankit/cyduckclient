@@ -592,6 +592,7 @@ input[id="others"] {
   border: none;
   width: 215px;
   height: 35px;
+  margin-bottom: 30px;
   border-radius: 10px;
   background: #0095ff;
 }

@@ -1,9 +1,5 @@
-
-
-
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
@@ -18,7 +14,6 @@
 }
 
 .App-header {
-
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,8 +22,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-
 
 @keyframes App-logo-spin {
   from {
@@ -39,3 +32,6 @@
   }
 }
 
+/* .root_parentdiv {
+  transform: scale(0.99);
+} */

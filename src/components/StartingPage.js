@@ -57,7 +57,7 @@ function StartingPage() {
                     </div>
                     <form action="" method="get">
                         {tkn === null ? <a className="strlinks" href="/signin"  >Get Started</a> : null}
-                        {tkn !== null ? <a className="strlinks" style={{ paddingLeft: "13px" }} href="/community">Answer Question</a> : <a className="strlinks2" style={{ paddingTop: "14px", paddingLeft: "13px" }} href="/community">Answer Question</a>}
+                        {tkn !== null ? <a className="strlinks" style={{ paddingLeft: "13px" }} href="/community">Answer Question</a> : <a className="strlinks2" style={{ paddingLeft: "13px" }} href="/community">Answer Question</a>}
 
                     </form>
 

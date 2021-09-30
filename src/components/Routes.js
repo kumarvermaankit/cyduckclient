@@ -22,6 +22,8 @@ import Editor from "./codeeditor"
 // import CKEditor from "./quillanswer";
 import FAQ from "./faq"
 import Batch from "./batch"
+import Groups from "./eachCommunity";
+import GroupSearch from "./groupSearch";
 function Routes(){
 
 return(
@@ -65,7 +67,7 @@ return(
   <AuthenticatedRoute exact path="/codemirror">
   <CodeM />
   </AuthenticatedRoute>
- <Route exact path="/search/:languages/:fields/:frameworks/:string">
+ <Route exact path="/search/:languages/:fields/:frameworks">
    <Searching />
  </Route>
  <AuthenticatedRoute exact path="/myq">
@@ -76,7 +78,14 @@ return(
 <AuthenticatedRoute exact path="/pro_file/:username">
    <Profile />
  </AuthenticatedRoute>
-<Route exact path="/ques/:index/:document/:username">
+ <AuthenticatedRoute exact path="/groups/:name">
+   <Groups />
+ </AuthenticatedRoute>
+ <AuthenticatedRoute exact path="/groupsearch/:name/:languages/:fields/:frameworks">
+   <GroupSearch />
+ </AuthenticatedRoute>
+
+<Route exact path="/ques/:id/:document/:username">
 <Qcode />
 </Route>
 

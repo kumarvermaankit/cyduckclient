@@ -1,13 +1,8 @@
-body {
-  width: 1500px;
-}
-
 #nav_bar {
   background-color: #279c9c;
   /* height: 70px; */
   /* background-image: radial-gradient(rgb(122, 127, 188) 10%, rgb(128, 124, 196)) */
   height: 50px;
-  width: 2740px;
   color: white;
   font-family: "Lora", serif;
 }
@@ -288,6 +283,45 @@ body {
   text-decoration: none;
   background-color: #00868b;
 }
+.dnav {
+  float: left;
+  left: -81px;
+  top: 7px;
+  width: 100px;
+}
+.dropnav li {
+  list-style-type: none;
+  height: 32px;
+  padding-top: 4px;
+}
+.dropnav ul {
+  position: absolute;
+  top: 50px;
+  display: none;
+  background: #279c9c;
+  z-index: 999;
+  left: 660px;
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+}
+.dropnav ul li a {
+  text-decoration: none;
+  color: white;
+}
+.dropnav li:hover > ul {
+  display: block;
+}
+.dropnav ul li {
+  width: 100px;
+  /* float: none; */
+  position: relative;
+  display: list-item;
+  text-decoration: none;
+}
+.dropnav ul li:hover {
+  background: #00868b;
+}
 
 .navitem_active {
   color: #000;
@@ -306,4 +340,15 @@ body {
   height: 45px;
   width: auto;
   justify-content: space-around;
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1300px) {
+  .dropdown {
+    display: inline-block;
+    position: relative;
+    left: 1110px;
+  }
+  .cyducktitle {
+    right: 65px;
+  }
 }

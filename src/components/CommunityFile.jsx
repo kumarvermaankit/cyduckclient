@@ -1,14 +1,15 @@
 //`https://cyduck.herokuapp.com/upload`
 
 import Community from "./community"
-import jwt_decode from "jwt-decode";
-function CommunityFile(){
 
+function CommunityFile() {
 
-    const url=`https://cyduck.herokuapp.com`
+    const url2 = `http://localhost:5000`
 
-    return(
-        <Community url={`${url}/upload/`} />
+    const url = `https://cyduck2.herokuapp.com`
+
+    return (
+        <Community url={`${url}/upload/allquestions`} />
     )
 }
 

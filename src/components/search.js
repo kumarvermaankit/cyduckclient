@@ -3,32 +3,13 @@ import {useHistory} from "react-router-dom";
 import MultiSelect from "react-multi-select-component";
 import SearchIcon from '@material-ui/icons/Search';
 import FilterListIcon from '@material-ui/icons/FilterList';
-
+import { useParams } from "react-router-dom";
 
 export default function Search() {
     let history=useHistory();
-    const [passvalue,setpassvalue]=useState({
-        larr:[],
-        farr:[],
-        frarr:[],
-        s:""
-      })
 
-      const [lpara,setlpara]=useState(true)
-      const [fpara,setfpara]=useState(true)
-      const [frpara,setfrpara]=useState(true)
       
-      const [sfocus,setsfocus]=useState(false)
-      
-      const [selected, setSelected] = useState({
-        languages:[],
-        fields:[],
-        frameworks:[],
-        string:""
-      
-      });
-
-
+    let params=useParams();
       const [lngdd,setlngdd]=useState(true)
     const [frdd,setfrdd]=useState(true)
     const [fdd,setfdd]=useState(true)
@@ -36,7 +17,7 @@ export default function Search() {
       const [selectedlang,setselectedlang]=useState([])
       const [selectedfram,setselectedfram]=useState([])
       const [selectedfield,setselectedfield]=useState([])
-
+     
       function search(){
         var str1=""
         var str2=""
@@ -84,8 +65,14 @@ export default function Search() {
       else{
       t=val
       }
-      
-      var s=`/search/${str1}/${str2}/${str3}/${t}`
+
+var s;
+      if(params.name===undefined){
+        s=`/search/${str1}/${str2}/${str3}`
+      }
+      else{
+        s=`/groupsearch/${params.name}/${str1}/${str2}/${str3}`
+     }
       
       
         history.push(s)

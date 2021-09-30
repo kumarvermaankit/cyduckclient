@@ -47,8 +47,6 @@
 .homediv {
   position: relative;
   bottom: 9px;
-
-  width: 1530px;
 }
 
 .list ul li a {
@@ -488,4 +486,67 @@
   bottom: -9px;
   margin-bottom: 0px;
   padding-top: 3px;
+}
+
+@media (max-width: 1264px) {
+  .homediv {
+    width: 1264px;
+    height: 100vh;
+  }
+}
+/* @media screen and (min-width: 1500px) {
+  .writer {
+    position: relative;
+    top: 30px;
+    width: 650px;
+    margin-left: 39px;
+  }
+  .intro_video {
+    left: 725px;
+    bottom: 76px;
+    width: 515px;
+  }
+} */
+/* @media screen and (min-width: 1025px) {
+  .writer {
+    position: relative;
+    top: 30px;
+    width: 650px;
+    margin-left: 39px;
+  }
+  .intro_video {
+    left: 725px;
+    bottom: 76px;
+    width: 515px;
+  }
+} */
+@media only screen and (min-width: 1025px) and (max-width: 1300px) {
+  .writer {
+    position: relative;
+    top: 30px;
+    width: 650px;
+    margin-left: 39px;
+  }
+  .intro_video {
+    left: 725px;
+    bottom: 76px;
+    width: 515px;
+  }
+  .box {
+    height: 580px;
+  }
+  .strlinks2 {
+    top: 160%;
+    height: 46px;
+    padding-top: 3px;
+  }
+  .try {
+    top: 140%;
+    height: 46px;
+    padding-top: 3px;
+  }
+  .strlinks {
+    height: 46px;
+    padding-top: 3px;
+  }
 }

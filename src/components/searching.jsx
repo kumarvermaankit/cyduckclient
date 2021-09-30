@@ -1,16 +1,12 @@
 import Community from "./community"
 import { useParams } from "react-router-dom";
-import {
-    BrowserRouter as Router,
-    Link,
-    useLocation
-  } from "react-router-dom";
+
 
 function Searching(){
 
   
 
-    let params=useParams();
+   let params=useParams();
    var lstr=params.languages;
    lstr=lstr.split(",")
    for(var i=0;i<lstr.length;i++){
@@ -24,11 +20,11 @@ function Searching(){
     var frstr=params.frameworks;
     frstr=frstr.split(",")
 
-    
-    
+      const url=`https://cyduck.herokuapp.com`
+      const url2=`http://localhost:5000`
 
     return(
-    <Community url={`https://cyduck.herokuapp.com/upload/search/${fstr}/${lstr}/${frstr}/${params.string}`}/>
+    <Community url={`${url2}/upload/searching/${fstr}/${lstr}/${frstr}`}/>
     )
 }
 

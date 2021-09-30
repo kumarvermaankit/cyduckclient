@@ -10,7 +10,7 @@ import NavigationBar from './components/navbar';
 
 import 'animate.css'
 
-
+import "./App.css"
 
 
 
@@ -59,7 +59,7 @@ async function onLoad(){
 
   return (
    
-<div>
+<div className="root_parentdiv">
 
 <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
 <NavigationBar />
