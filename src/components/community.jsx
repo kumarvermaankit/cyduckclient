@@ -28,7 +28,11 @@ function Community(props) {
 
     let history = useHistory();
     var token = localStorage.usertoken
-    var decoded = jwt_decode(token)
+    var decoded;
+    if (token) {
+        decoded = jwt_decode(token)
+    }
+
 
     const [loading, setloading] = useState(false)
 
@@ -43,7 +47,7 @@ function Community(props) {
 
 
 
-    var tkn = localStorage.getItem('usertoken');
+
 
     const [joinStatus, setjoinStatus] = useState(false)
 
@@ -112,7 +116,7 @@ function Community(props) {
 
             //  if(result){
 
-            var result = await axios.get(`${props.url}`);
+            var result = await axios.get(`${props.url}/${activepage}`);
 
             var res;
 
@@ -189,11 +193,14 @@ function Community(props) {
 
 
     useEffect(() => {
-        axios.get(`${url}/upload/mygroups/${decoded.data.username}`).then((result) => {
-            if (result.data.includes(params.name)) {
-                setjoinStatus(true)
-            }
-        })
+        if (decoded !== undefined) {
+            axios.get(`${url}/upload/mygroups/${decoded.data.username}`).then((result) => {
+                if (result.data.includes(params.name)) {
+                    setjoinStatus(true)
+                }
+            })
+        }
+
     }, [])
 
     // async function Support(){
@@ -283,7 +290,7 @@ function Community(props) {
 
         var c = 0
 
-        console.log(props.d)
+
 
 
         useEffect(() => {
@@ -354,20 +361,28 @@ function Community(props) {
 
     async function joinGroup() {
 
-        const res = await axios.post(`${url}/upload/group_join`, { username: decoded.data.username, group: params.name })
+        if (decoded !== undefined) {
+            const res = await axios.post(`${url}/upload/group_join`, { username: decoded.data.username, group: params.name })
 
-        if (res) {
-            setjoinStatus(true)
+            if (res) {
+                setjoinStatus(true)
+            }
         }
+
+
     }
 
     async function leaveGroup() {
 
-        const res = await axios.post(`${url}/upload/group_leave`, { username: decoded.data.username, group: params.name })
+        if (decoded !== undefined) {
+            const res = await axios.post(`${url}/upload/group_leave`, { username: decoded.data.username, group: params.name })
 
-        if (res) {
-            setjoinStatus(false)
+            if (res) {
+                setjoinStatus(false)
+            }
         }
+
+
     }
 
 

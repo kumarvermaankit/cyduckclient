@@ -6,9 +6,7 @@ import "./navbar.css"
 import jwt_decode from "jwt-decode";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import axios from "axios";
-import MultiSelect from "react-multi-select-component";
-import SearchIcon from '@material-ui/icons/Search';
-import FilterListIcon from '@material-ui/icons/FilterList';
+import DoneIcon from '@material-ui/icons/Check';
 
 
 
@@ -16,7 +14,9 @@ import FilterListIcon from '@material-ui/icons/FilterList';
 
 function NavigationBar() {
 
+  const url2 = `http://localhost:5000`
 
+  const url = `https://cyduck2.herokuapp.com`
 
 
   const [l, setl] = useState("")
@@ -25,7 +25,7 @@ function NavigationBar() {
 
 
   const [currentpage, setcurrentpage] = useState("Page")
-
+  const [community, setcommunity] = useState([])
   var tkn = localStorage.getItem('usertoken');
 
 
@@ -55,6 +55,8 @@ function NavigationBar() {
     s: ""
   })
 
+
+  const groups = ["codechef", "mait", "codesauce", "msit"]
 
   const [psrc, setpsrc] = useState()
 
@@ -123,29 +125,18 @@ function NavigationBar() {
   }, [l])
 
 
+
+
+
   useEffect(() => {
-    var val = document.getElementsByClassName("gray")
-    console.log(val)
-    var count = 0
-    for (var i = 0; i < val.length; i++) {
-      console.log(val[i].tagName)
-      if (val[i].tagName === "SPAN") {
 
 
-
-        if (count === 0) {
-          val[i].textContent = "language"
-        }
-        else if (count === 1) {
-          val[i].textContent = "field"
-        }
-        else if (count === 2) {
-          val[i].textContent = "framework"
-        }
-        count++
-      }
-      console.log(val[i].textContent)
+    if (decoded !== undefined) {
+      axios.get(`${url}/upload/mygroups/${decoded.data.username}`).then((result) => {
+        setcommunity(result.data)
+      })
     }
+
   }, [])
 
 
@@ -310,7 +301,7 @@ function NavigationBar() {
   }
 
   function dropNavbar(e) {
-    console.log(e);
+
   }
 
 
@@ -325,7 +316,18 @@ function NavigationBar() {
     // document.getElementById("langpara").style.transition="0.05s all ease-in-out"
   }
 
+  function renderGroups() {
+    return (
+      <ul className="dropnav">
+        <li><a className="navitem dnav">Groups</a></li>
+        {groups.map((each) => {
 
+          <li onClick={dropNavbar}><a href="groups">{each.toUpperCase()}</a>{community.includes(each) === true ? <DoneIcon /> : null}</li>
+
+        })}
+      </ul>
+    )
+  }
 
 
 
@@ -409,15 +411,7 @@ function NavigationBar() {
 
           <a className={`navitem ${currentpage === "faq" ? "navitem_active" : null}`} style={{ position: "relative", left: "-50px" }} href="/faq" >FAQ</a>
 
-          <ul className="dropnav" >
-            <li><a className="navitem dnav" href="#">Hello </a>
-              <ul>
-                <li onClick={dropNavbar}><a href="groups">No.1</a></li>
-                <li onClick={dropNavbar}><a href="#">No.2</a></li>
-                <li onClick={dropNavbar}><a href="#">No.3</a></li>
-              </ul>
-            </li>
-          </ul>
+          {renderGroups()}
 
 
           {/* 

@@ -120,7 +120,7 @@ function File(props) {
   }, [])
 
   useEffect(() => {
-    axios.get(`${url2}/upload/mygroups/${decoded.data.username}`).then((result) => {
+    axios.get(`${url}/upload/mygroups/${decoded.data.username}`).then((result) => {
       setcommunity(result.data)
     })
   }, [])

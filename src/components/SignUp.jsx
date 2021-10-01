@@ -94,7 +94,7 @@ function SignUp(props) {
 
         if (emailstate === true && userstate === true) {
 
-            axios.post(`${url2}/signup`, userP)
+            axios.post(`${url}/signup`, userP)
                 .then(res => {
 
                     if (res.data.data === true) {

@@ -24,7 +24,7 @@ function GroupSearch() {
     const url2 = `http://localhost:5000`
 
     return (
-        <Community url={`${url2}/upload/groupsearch/${params.name}/${fstr}/${lstr}/${frstr}`} />
+        <Community url={`${url}/upload/groupsearch/${params.name}/${fstr}/${lstr}/${frstr}`} />
     )
 }
 
