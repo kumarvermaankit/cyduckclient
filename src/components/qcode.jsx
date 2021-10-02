@@ -214,7 +214,7 @@ function Qcode() {
     event.preventDefault()
 
     var val = document.querySelector(`#answercomment${ansindex}`).value
-    console.log(val)
+
 
     const result = await axios.post(`${url}/upload/answercomment`, { comment: val, useronline: decoded.data.username, id: params.id, document: doc_name, ansindex: ansindex })
     if (result) {

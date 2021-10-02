@@ -41,7 +41,7 @@ function Google() {
         console.log(response);
     }
     return (
-        <div>
+        <div style={{ width: "200px" }}>
             <GoogleLogin
                 className="googlelogin"
                 clientId="332494597752-f27u8a4kn43kv3v69j8891lcq5varrkl.apps.googleusercontent.com"

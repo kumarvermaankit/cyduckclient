@@ -66,11 +66,17 @@
   margin-top: 8px;
 }
 .otherlogin {
-  position: relative;
-  left: 900px;
-  top: 100px;
+  align-items:center;
+  margin-left:5%;
+  width:auto;
+  height:100%;
 }
-
+.otherlogin div{
+  width:auto;
+}
+.googlelogin{
+  margin:0;
+}
 #signbutton:hover {
   background-color: #0077cc;
 }

@@ -28,8 +28,6 @@ function File(props) {
 
 
 
-
-
   let history = useHistory();
   const url = `https://cyduck2.herokuapp.com`
   const url2 = `http://localhost:5000`

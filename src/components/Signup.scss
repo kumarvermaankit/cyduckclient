@@ -1,16 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 .signup-container {
+  margin-left:5%;
   top: 380px;
   left: 30%;
-  position: absolute;
   background: transparent;
-  transform: translate(-50%, -50%);
   box-sizing: border-box;
   color: #d5d7de;
-  padding: 40px 20px;
-  width: 650px;
-  height: 700px;
+  max-height:590px;
+  float:left;
 }
 
 .line1 {

@@ -321,9 +321,11 @@ function NavigationBar() {
       <ul className="dropnav">
         <li><a className="navitem dnav">Groups</a></li>
         {groups.map((each) => {
+          return (
 
-          <li onClick={dropNavbar}><a href="groups">{each.toUpperCase()}</a>{community.includes(each) === true ? <DoneIcon /> : null}</li>
 
+            <li onClick={dropNavbar}><a href="groups">{each.toUpperCase()}</a>{community.includes(each) === true ? <DoneIcon /> : null}</li>
+          )
         })}
       </ul>
     )
