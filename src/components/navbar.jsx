@@ -58,6 +58,8 @@ function NavigationBar() {
 
   const groups = ["codechef", "mait", "codesauce", "msit"]
 
+  const [groupstate, setgroupstate] = useState(false)
+
   const [psrc, setpsrc] = useState()
 
   async function Logout(event) {
@@ -301,8 +303,10 @@ function NavigationBar() {
   }
 
   function dropNavbar(e) {
-
+    console.log(e)
   }
+
+
 
 
 
@@ -318,16 +322,16 @@ function NavigationBar() {
 
   function renderGroups() {
     return (
-      <ul className="dropnav">
-        <li><a className="navitem dnav">Groups</a></li>
+      <div className="groups">
+
         {groups.map((each) => {
           return (
 
 
-            <li onClick={dropNavbar}><a href="groups">{each.toUpperCase()}</a>{community.includes(each) === true ? <DoneIcon /> : null}</li>
+            <div className="group_list" onClick={dropNavbar}><a href={`/groups/${each}`} style={{ color: "black" }} >{each.toUpperCase()}</a>{community.includes(each) === true ? <DoneIcon style={{ color: "black", width: "15px", height: "15px", marginLeft: "17%" }} /> : null}</div>
           )
         })}
-      </ul>
+      </div>
     )
   }
 
@@ -412,8 +416,11 @@ function NavigationBar() {
 
 
           <a className={`navitem ${currentpage === "faq" ? "navitem_active" : null}`} style={{ position: "relative", left: "-50px" }} href="/faq" >FAQ</a>
+          <div>
 
-          {renderGroups()}
+          </div>
+          <a className={`navitem ${currentpage === "faq" ? "navitem_active" : null}`} onClick={() => groupstate ? setgroupstate(false) : setgroupstate(true)} style={{ position: "relative", left: "-50px", cursor: "pointer" }} >Groups</a>
+          {groupstate ? renderGroups() : null}
 
 
           {/* 

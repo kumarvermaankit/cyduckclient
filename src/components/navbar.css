@@ -342,6 +342,27 @@
   justify-content: space-around;
 }
 
+.groups{
+  background-color: white;
+  width:6.75%;
+  font-size: 13px;
+  height:auto;
+  margin-top: 9%;
+  z-index: 5;
+  position: relative;
+  right:10%
+}
+
+.group_list{
+  border: 1px solid black;
+  width:100%;
+  cursor: pointer;
+ }
+
+ .group_list:hover{
+   background-color: #ddd;
+ }
+
 @media only screen and (min-width: 1025px) and (max-width: 1300px) {
   .dropdown {
     display: inline-block;

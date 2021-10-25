@@ -17,7 +17,7 @@ function MyQuestions() {
     return (
         <div>
 
-            <Community url={`${url2}/upload/myquestions/${decoded.data.username}`} url1={`https://cyduck.herokuapp.com/upload/mq/${decoded.data.username}`} />
+            <Community url={`${url2}/upload/myquestions/${decoded.data.username}`} />
         </div>
     )
 }

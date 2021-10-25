@@ -116,15 +116,13 @@ function Community(props) {
 
             //  if(result){
 
+
+            setloading(true)
             var result = await axios.get(`${props.url}/${activepage}`);
 
-            var res;
-
-
-
-
-
-
+            if (result) {
+                setloading(false)
+            }
 
             if (result.data.arr.length === 0) {
                 setarr([null])
@@ -135,7 +133,7 @@ function Community(props) {
             }
 
 
-
+            setno_of_questions(result.data.no_of_questions)
 
 
             // setactivepage(res.data.pagenumber)
@@ -433,14 +431,7 @@ function Community(props) {
                         return <h1 style={{ marginLeft: "660px" }}>NO Searches Found</h1>
                     }
 
-
-
-
-
-
                     return <Quesdiv key={each.id} t={each.question_title} i={each.id} u={each.username} doc_name={each.documentname} index={each.index} time={each.time} create={each.createdAt} />
-
-
 
                 })}
 
