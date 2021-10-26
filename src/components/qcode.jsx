@@ -806,7 +806,9 @@ function Qcode() {
     if (document.querySelector("#givencode").style.visibility === "hidden") {
       document.querySelector("#givencode").style.visibility = "visible"
     }
-
+    else {
+      document.querySelector("#givencode").style.visibility = "hidden"
+    }
 
     editcode ? seteditcode(false) : seteditcode(true)
   }
@@ -814,7 +816,7 @@ function Qcode() {
 
 
 
-  console.log(ceditor)
+
 
   function Quesdiv(props) {
 

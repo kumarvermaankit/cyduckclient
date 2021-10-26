@@ -1175,12 +1175,16 @@ function File(props) {
           </div>
 
 
-
+          <button onClick={(event) => proceed(event)} style={{ left: "85%" }} className="send-button" >Proceed</button>
         </form>
 
 
 
+
         <button onClick={(event) => proceed(event)} className="send-button" >Proceed</button>
+
+
+
 
       </div>
 
