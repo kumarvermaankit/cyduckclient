@@ -338,7 +338,7 @@ img {
 .keyword_containerdiv {
   animation-name: sopen;
   animation-duration: 0.5s;
-  width: 100%;
+  width: 140%;
   max-height: 103px;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -392,7 +392,7 @@ img {
   position: relative;
   height: 25px;
   border: none;
-  width: 220px;
+  width: 100%;
   cursor: pointer;
 }
 
