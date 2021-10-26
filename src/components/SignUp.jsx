@@ -138,7 +138,7 @@ function SignUp(props) {
 
 
                     <div className="sign-up-box">
-                        <p className="header" style={{ margin: "2% 5%" }}><b>SignUp !</b></p>
+                        <p className="header" style={{ margin: "2% 5%" }}><b>Sign Up For Free</b></p>
                         <label><h3><b>Email</b></h3></label>
                         <input id="inputelement1" style={{ height: "50px" }} type="email" name="email" value={userP.email} onChange={(event) => OnChange(event, 1)} onFocus={() => setemailstate(true)} required="true" autoComplete="off" />
                         {emailstate !== undefined ? emailstate ? <p className="checkpara1" style={{ top: "30px", left: "42px" }} >Available</p> : <p className="checkpara" style={{ top: "30px", left: "42px" }}>Not available</p> : null}
@@ -157,7 +157,7 @@ function SignUp(props) {
                         {signpara ? <p>User already exists</p> : null}
                     </div>
                     <div>
-                        <button className=" signinput" id="signupbutton" classname="btn btn-primary" type="submit" ><h3><b>SignUp</b></h3></button>
+                        <button className=" signinput" id="signupbutton" classname="btn btn-primary" type="submit" ><h3><b>Sign Up</b></h3></button>
                     </div>
                 </form>
                 <div className="line1">
