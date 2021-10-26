@@ -1127,7 +1127,7 @@ function File(props) {
 
                 style={{ marginLeft: "50px" }}
                 set={valuesetter}
-                height="77.11%"
+                height="157%"
                 alert={setalertbox2}
               />
 

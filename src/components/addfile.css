@@ -94,7 +94,7 @@ input[type="file"] {
 
 .descinput {
   width: 100%;
-  height: 6.2%;
+  height: 13%;
 
   margin-top: 20px;
 }
@@ -489,8 +489,8 @@ img {
   color: white;
   background-color: #0095ff;
   position: relative;
-  left: 555px;
-  bottom: 60px;
+  left: 34.77%;
+  top:230px;
   width: 218px;
   height: 54px;
   z-index: 0;
