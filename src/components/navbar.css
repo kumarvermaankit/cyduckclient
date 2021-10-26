@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+* {
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+
+
 #nav_bar {
   background-color: #279c9c;
   /* height: 70px; */
   /* background-image: radial-gradient(rgb(122, 127, 188) 10%, rgb(128, 124, 196)) */
   height: 50px;
   color: white;
-  font-family: "Lora", serif;
+  font-family:'Zen Kurenaido', sans-serif;
 }
 #nav_bar div a {
   margin-top: 2px;
@@ -15,7 +21,6 @@
   margin: 5px;
   display: inline-block;
   position: relative;
-
   left: 20px;
 }
 
@@ -65,10 +70,21 @@
   margin-right: 45px;
 }
 
+.navLogo {
+  height: 2.5rem;
+  width: auto;
+  /* padding-left: 4em; */
+}
+#navLogoBefore {
+  height: 2.5rem;
+  width: auto;
+  padding-left: 4em;
+}
+
 .cyducktitle {
   display: inline-block;
   position: relative;
-  right: 75px;
+  padding-right: 3rem;
   top: 10px;
   font-size: 30px;
   font-family: "Candal", serif;
@@ -86,6 +102,12 @@
 
   top: 10px;
   font-size: 100px;
+}
+
+/* Signin Signup */
+.navSign {
+  flex: auto;
+  align-content: flex-end;
 }
 
 .frm1 {
