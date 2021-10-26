@@ -7,7 +7,7 @@ import jwt_decode from "jwt-decode";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import axios from "axios";
 import DoneIcon from '@material-ui/icons/Check';
-
+import logo from "./logo.png"
 
 
 
@@ -242,8 +242,6 @@ function NavigationBar() {
         }
       })
     }
-
-
   }
 
 
@@ -297,7 +295,6 @@ function NavigationBar() {
 
     var s = `/search/${str1}/${str2}/${str3}/${t}`
 
-
     history.push(s)
 
   }
@@ -307,12 +304,7 @@ function NavigationBar() {
   }
 
 
-
-
-
-
   function searchfocus(event) {
-
 
     event.preventDefault()
 
@@ -323,12 +315,9 @@ function NavigationBar() {
   function renderGroups() {
     return (
       <div className="groups">
-
         {groups.map((each) => {
           return (
-
-
-            <div className="group_list" onClick={dropNavbar}><a href={`/groups/${each}`} style={{ color: "black" }} >{each.toUpperCase()}</a>{community.includes(each) === true ? <DoneIcon style={{ color: "black", width: "15px", height: "15px", marginLeft: "17%" }} /> : null}</div>
+           <div className="group_list" onClick={dropNavbar}><a href={`/groups/${each}`} style={{ color: "black" }} >{each.toUpperCase()}</a>{community.includes(each) === true ? <DoneIcon style={{ color: "black", width: "15px", height: "15px", marginLeft: "17%" }} /> : null}</div>
           )
         })}
       </div>
@@ -361,7 +350,7 @@ function NavigationBar() {
 
 
 
-
+          <img src={logo} className="navLogo"/>
           <Navbar.Brand className="cyducktitle" href="/home" ><p><b>Cy<span>duck</span></b></p></Navbar.Brand>
 
 
@@ -442,7 +431,8 @@ function NavigationBar() {
     return (
       <div >
         <Navbar expand="lg" id="nav_bar" >
-          <Navbar.Brand className="cyducktitle" style={{ marginLeft: "100px" }} href="/home" ><p><b>Cy<span>Duck</span></b></p></Navbar.Brand>
+          <img src={logo} className="navLogo" id='navLogoBefore' />
+          <Navbar.Brand className="cyducktitle" href="/home" ><p><b>Cy<span>Duck</span></b></p></Navbar.Brand>
 
           {/* <form className="frm1" onSubmit={Search}>
         <input id="search" className="searchInput" placeholder="Search" />
@@ -474,7 +464,7 @@ function NavigationBar() {
         </form> */}
 
 
-          <div>
+          <div className="navSign">
             <a className="navitem" href="/signin">Signin</a>
             <a className="navitem" href="signup">Signup</a>
           </div>
