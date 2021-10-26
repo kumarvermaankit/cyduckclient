@@ -516,7 +516,7 @@ function File(props) {
     return (
       <article>
 
-        <button className="keyword_btn" style={{ marginLeft: "35px" }} onClick={(event) => handleClick(event)}>Screen Recorder</button>
+        <button className="keyword_btn" style={{ marginLeft: "35px", width: "110%" }} onClick={(event) => handleClick(event)}>Screen Recorder</button>
         {recorderstate ? <div className="keyword_containerdiv" style={{ marginLeft: "35px", overflowY: "hidden" }}>
           {/* <div className="flx">
       {error ? `${status} ${error.message}` : status}
@@ -1127,7 +1127,7 @@ function File(props) {
 
                 style={{ marginLeft: "50px" }}
                 set={valuesetter}
-                height="620px"
+                height="157%"
                 alert={setalertbox2}
               />
 
@@ -1192,7 +1192,7 @@ function File(props) {
 
 
 
-        <button onClick={(event) => proceed(event)} style={{ left: "1235px" }} className="send-button" >Proceed</button>
+        <button onClick={(event) => proceed(event)} style={{ left: "85%" }} className="send-button" >Proceed</button>
 
       </div>
 

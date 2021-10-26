@@ -17,7 +17,7 @@ function MyQuestions() {
     return (
         <div>
 
-            <Community url={`${url2}/upload/myquestions/${decoded.data.username}`} />
+            <Community url={`${url}/upload/myquestions/${decoded.data.username}`} />
         </div>
     )
 }
