@@ -57,7 +57,7 @@ function StartingPage() {
                     </div>
                     <form action="" method="get">
                         {tkn === null ? <a className="strlinks" href="/signin"  >Get Started</a> : null}
-                        {tkn !== null ? <a className="strlinks" style={{ paddingLeft: "13px" }} href="/community">Answer Question</a> : <a className="strlinks2" style={{ paddingLeft: "13px" }} href="/community">Answer Question</a>}
+                        {tkn !== null ? <a className="strlinks" style={{ paddingLeft: "13px" }} href="/community">Answer Question</a> : <a className="strlinks2" style={{ paddingLeft: "13px", paddingTop:"10px" }} href="/community">Answer Questions</a>}
 
                     </form>
 
@@ -76,7 +76,7 @@ function StartingPage() {
 
                     <div className="about-content">
                         <img src={cyduck} alt="" />
-                        <h4>We allow users to post their doubts on our platform using different medium for free or by paying.<p>then other users can answer their question, and redeem the amount paid by the user</p></h4>
+                        <h4>We allow users to post their doubts on our platform using different mediums for free or by paying.<p>then other users can answer their question, and redeem the amount paid by the user</p></h4>
 
                     </div>
 
