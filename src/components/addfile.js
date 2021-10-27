@@ -1120,14 +1120,15 @@ function File(props) {
           <div style={{ display: "flex" }}>
 
 
-            <div >
+            <div className="tinymce">
               <input className="descinput" placeholder="Add Title of Question" onChange={(event) => descset(event)} />
 
               <Tinymce
 
                 style={{ marginLeft: "50px" }}
                 set={valuesetter}
-                height="157%"
+                height="608px"
+
                 alert={setalertbox2}
               />
 

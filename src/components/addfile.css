@@ -94,9 +94,13 @@ input[type="file"] {
 
 .descinput {
   width: 100%;
-  height: 13%;
-
+  height:50px;
+  
   margin-top: 20px;
+}
+
+.tinymce{
+  width:80%
 }
 
 .code_block {
@@ -119,8 +123,9 @@ input[type="file"] {
 }
 
 .tox-tinymce {
-  width: 1200px;
+  /* width: 1200px; */
   /* min-height: 620px; */
+  width:100%
 }
 
 .code_editor2 {
@@ -197,7 +202,8 @@ input[type="file"] {
 }
 
 .keyworddiv {
-  width: 170px;
+  width: 10.65%;
+ 
 }
 
 .alert {
@@ -601,10 +607,14 @@ input[id="others"] {
   height: 620px;
 }
 
-
+@media (max-width: 1264px) {
+ .tinymce{
+   width:60%
+ }
+}
 
 @media only screen and (min-width: 1025px) and (max-width: 1300px){
-  .maincard{
-    transform: 0.7;
-  }
+ .tinymce{
+   width: 60%;
+ }
 }
