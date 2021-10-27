@@ -57,7 +57,7 @@ function StartingPage() {
                     </div>
                     <form action="" method="get">
                         {tkn === null ? <a className="strlinks" href="/signin"  >Get Started</a> : null}
-                        {tkn !== null ? <a className="strlinks" style={{ paddingLeft: "13px" }} href="/community">Answer Question</a> : <a className="strlinks2" style={{ paddingLeft: "13px", paddingTop:"10px" }} href="/community">Answer Questions</a>}
+                        {tkn !== null ? <a className="strlinks" style={{ paddingLeft: "13px" }} href="/community">Answer Question</a> : <a className="strlinks2" style={{ paddingLeft: "13px", paddingTop: "10px" }} href="/community">Answer Questions</a>}
 
                     </form>
 
@@ -65,7 +65,7 @@ function StartingPage() {
                 </div>
 
 
-                <video className="intro_video" controls="play pause" />
+                {/* <video className="intro_video" controls="play pause" /> */}
             </div>
 
             <div className="about-us">
