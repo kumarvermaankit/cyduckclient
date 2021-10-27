@@ -275,6 +275,10 @@ function File(props) {
 
   const send = async event => {
 
+
+
+
+
     // const r=await axios.post(`${url}/upload`,data)
 
 
@@ -288,7 +292,15 @@ function File(props) {
 
     }
 
+
+
+
+
+
   }
+
+
+
 
 
   const GoToCode = event => {
@@ -1176,13 +1188,9 @@ function File(props) {
           </div>
 
 
-          <button onClick={(event) => proceed(event)} style={{ left: "85%" }} className="send-button" >Proceed</button>
+          <button onClick={(event) => proceed(event)} style={{ left: "81%" }} className="send-button" >Proceed</button>
         </form>
 
-
-
-
-        <button onClick={(event) => proceed(event)} className="send-button" >Proceed</button>
 
 
 

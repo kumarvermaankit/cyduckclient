@@ -506,7 +506,7 @@ img {
   background-color: #0095ff;
   position: relative;
 
-  top:230px;
+  bottom: 60px;
   width: 218px;
   height: 54px;
   z-index: 0;
@@ -516,6 +516,7 @@ img {
   border: none;
   border-radius: 10px;
   border: none;
+  transform: scale(0.9);
 }
 
 .close_btn:hover {
