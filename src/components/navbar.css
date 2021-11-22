@@ -289,7 +289,7 @@
   height: 50px;
   /* float: left; */
   position: relative;
-  right: 50px;
+  right: 3.1%;
   font-size: 22px;
   text-align: center;
   justify-content: center;
@@ -388,7 +388,7 @@
    background-color: #ddd;
  }
 
-@media only screen and (min-width: 1025px) and (max-width: 1300px) {
+/* @media only screen and (min-width: 1025px) and (max-width: 1300px) {
   .dropdown {
     display: inline-block;
     position: relative;
@@ -397,4 +397,4 @@
   .cyducktitle {
     right: 65px;
   }
-}
+} */

@@ -16,9 +16,7 @@ html {
 body {
   font-family: 'Zen Kurenaido', sans-serif, Helvetica, sans-serif;
 }
-.inputdiv {
-  max-width: 100%;
-}
+
 .loading {
   width: 3.9%;
   height: 7.4%;
@@ -107,7 +105,8 @@ input[type="file"] {
 }
 
 .tinymce{
-  width:80%
+  width:80%;
+  height:auto;
 }
 
 .code_block {
@@ -384,7 +383,7 @@ img {
   width: 140%;
   border: none;
   background: #bdd4de;
-  font-size: auto;
+  font-size: 80%;
 }
 
 .keyword_div {
@@ -618,7 +617,7 @@ input[id="others"] {
   height: 620px;
 }
 
-@media (max-width: 1264px) {
+/* @media (max-width: 1264px) {
  .tinymce{
    width:60%
  }
@@ -628,4 +627,4 @@ input[id="others"] {
  .tinymce{
    width: 60%;
  }
-}
+} */

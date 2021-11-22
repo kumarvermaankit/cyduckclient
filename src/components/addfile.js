@@ -1103,99 +1103,96 @@ function File(props) {
 
       {paymentalertbox ? <AlertBox3 /> : null}
       {/* {mstate?  */}
-      <div className="inputdiv">
-        <form action="#">
+      {/* <div className="inputdiv"> */}
+      <form action="#">
 
-          {/* <div  className="headcard" > */}
-          <div style={{ display: "flex" }}>
-            {/*   
+        {/* <div  className="headcard" > */}
+        {/*   
      <p className="add" >Code</p> */}
 
-          </div>
 
 
-
-          {/* {cstate?<CodeM   Change={OnChangetitle}  val={question.title} name="title" plh="Enter Question"  hght="60px" wdt="1450" required={true} />:null}  
+        {/* {cstate?<CodeM   Change={OnChangetitle}  val={question.title} name="title" plh="Enter Question"  hght="60px" wdt="1450" required={true} />:null}  
 {cstate?<CodeM   Change={OnChangecontent}  val={question.content} name="content" plh="Enter or Copy Code" hght="400px" wdt="1450" />:null}  */}
-          <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", height: "100%" }}>
 
 
-            <div className="tinymce">
-              <input className="descinput" placeholder="Add Title of Question" onChange={(event) => descset(event)} />
+          <div className="tinymce">
+            <input className="descinput" placeholder="Add Title of Question" onChange={(event) => descset(event)} />
 
-              <Tinymce
+            <Tinymce
 
-                style={{ marginLeft: "50px" }}
-                set={valuesetter}
-                height="608px"
+              style={{ marginLeft: "50px" }}
+              set={valuesetter}
+              height="608px"
 
-                alert={setalertbox2}
-              />
+              alert={setalertbox2}
+            />
 
 
 
+          </div>
+
+          <div className="keyworddiv">
+
+            <br></br>
+            <div className="keyword_div">
+              <button onClick={(event) => { selectClick(event, 1) }} className="keyword_btn">Languages</button>
+              {lngdd ? <div className="keyword_containerdiv">
+                {languagemaker()}
+
+              </div> : null}
             </div>
 
-            <div className="keyworddiv">
+            <div className="keyword_div">
+              <button onClick={(event) => { selectClick(event, 2) }} className="keyword_btn" >Frameworks</button>
+              {frdd ? <div className="keyword_containerdiv">
+                {framemaker()}
 
-              <br></br>
-              <div className="keyword_div">
-                <button onClick={(event) => { selectClick(event, 1) }} className="keyword_btn">Languages</button>
-                {lngdd ? <div className="keyword_containerdiv">
-                  {languagemaker()}
-
-                </div> : null}
-              </div>
-
-              <div className="keyword_div">
-                <button onClick={(event) => { selectClick(event, 2) }} className="keyword_btn" >Frameworks</button>
-                {frdd ? <div className="keyword_containerdiv">
-                  {framemaker()}
-
-                </div> : null}
-              </div>
-
-              <div className="keyword_div">
-                <button onClick={(event) => { selectClick(event, 3) }} className="keyword_btn" >Fields</button>
-                {fdd ? <div className="keyword_containerdiv">
-                  {fieldmaker()}
-
-                </div> : null}
-              </div>
-
-              <div className="keyword_div">
-                <button onClick={(event) => { selectClick(event, 4) }} className="keyword_btn" >Community</button>
-                {cdd ? <div className="keyword_containerdiv">
-                  {communitymaker()}
-
-                </div> : null}
-              </div>
-
-
-              <div>
-                <h3 style={{ fontSize: "13px", marginLeft: "40px" }}>Click Twice to Open </h3>
-                <h3 style={{ fontSize: "13px", marginLeft: "40px" }}>Give Permission to both screen and mic to record</h3>
-                <Recorder />
-              </div>
-
-
-
+              </div> : null}
             </div>
 
+            <div className="keyword_div">
+              <button onClick={(event) => { selectClick(event, 3) }} className="keyword_btn" >Fields</button>
+              {fdd ? <div className="keyword_containerdiv">
+                {fieldmaker()}
+
+              </div> : null}
+            </div>
+
+            <div className="keyword_div">
+              <button onClick={(event) => { selectClick(event, 4) }} className="keyword_btn" >Community</button>
+              {cdd ? <div className="keyword_containerdiv">
+                {communitymaker()}
+
+              </div> : null}
+            </div>
+
+
+            <div>
+              <h3 style={{ fontSize: "13px", marginLeft: "40px" }}>Click Twice to Open </h3>
+              <h3 style={{ fontSize: "13px", marginLeft: "40px" }}>Give Permission to both screen and mic to record</h3>
+              <Recorder />
+            </div>
 
 
 
           </div>
 
 
-          <button onClick={(event) => proceed(event)} style={{ left: "81%" }} className="send-button" >Proceed</button>
-        </form>
+
+
+        </div>
+
+
+        <button onClick={(event) => proceed(event)} style={{ left: "81%" }} className="send-button" >Proceed</button>
+      </form>
 
 
 
 
 
-      </div>
+      {/* </div> */}
 
 
     </div>
