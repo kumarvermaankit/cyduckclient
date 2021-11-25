@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home2.css"
 import { useHistory } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel'
@@ -50,6 +50,13 @@ function StartingPage() {
         event.preventDefault()
         history.push("/signin")
     }
+
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex, e) => {
+        setIndex(selectedIndex);
+    };
+
 
     return (
         <div className="homediv">
@@ -121,43 +128,43 @@ function StartingPage() {
 
 
             <div><p className="wded">What do we do</p></div>
-            <section class="colored-section" id="testimonials" style={{ height: "500px", background: "#142F43" }}>
+            <section class="colored-section" id="testimonials" style={{ height: "500px", }}>
 
 
-                <Carousel  >
-                    <Carousel.Item interval={1000}>
-                        <img
-                            className="d-block w-100"
-                            src="holder.js/800x400?text=First slide&bg=373940"
-                            alt="First slide"
-                        />
-                        <Carousel.Caption>
+                <Carousel activeIndex={index} onSelect={handleSelect} >
+                    <Carousel.Item style={{ backgroundColor: "#142F43" }} >
+                        <h1>Cyduck helps you in Solving your query</h1>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        {/* <Carousel.Caption>
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption> */}
+                    </Carousel.Item>
+                    <Carousel.Item style={{ backgroundColor: "#142F43" }}>
+
+                        <h1>Cyduck helps you in Solving your query</h1>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <Carousel.Caption>
+                            {/* <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src="holder.js/800x400?text=Second slide&bg=282c34"
-                            alt="Second slide"
-                        />
+                    <Carousel.Item style={{ backgroundColor: "#142F43" }}>
 
+                        <h1>Cyduck helps you in Solving your query</h1>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p className="carousel_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src="holder.js/800x400?text=Third slide&bg=20232a"
-                            alt="Third slide"
-                        />
-
-                        <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            {/* <h3>Third slide label</h3>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

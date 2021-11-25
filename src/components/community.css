@@ -676,7 +676,7 @@ rect:hover {
 .frm {
   height: auto;
   position: absolute;
-  padding-top: 40px;
+  padding-top: 3px;
   padding-left: 25px;
   padding-bottom: 10px;
   top: 100px;

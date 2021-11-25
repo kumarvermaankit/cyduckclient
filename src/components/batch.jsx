@@ -47,7 +47,7 @@ export default function Batch(props) {
 					<button class="card-btn card-btn1" onClick={() => props.paymenthandler(5)}>Pay</button>
 				</div>
 				<div class="card-box">
-					<h3 class="card-title card-title1">Rs 10/-</h3>
+					<h3 class="card-title card-title1">Custom</h3>
 					<p class="card-text">
 						For Rs.10 you can get answer to your question within 3 hours otherwise your amount will be refunded automatically within next 2 days.
 					</p>

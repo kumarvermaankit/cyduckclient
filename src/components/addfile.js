@@ -644,7 +644,6 @@ function File(props) {
 
 
 
-
   async function razorPayPaymentHandler(money) {
 
 
@@ -1052,7 +1051,7 @@ function File(props) {
     )
   }
 
-  console.log(paymentstate)
+
 
 
   function paymentalert(event, a) {
