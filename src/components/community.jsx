@@ -385,7 +385,7 @@ function Community(props) {
     function Quesdiv(props) {
 
 
-        { console.log(props.create) }
+        { console.log(props.time) }
         return (
 
             <div style={{ display: "flex" }}>
@@ -393,7 +393,7 @@ function Community(props) {
 
 
 
-                    <a href={`/ques/${props.i}/${props.doc_name}/${props.u}`}><b><p style={{ color: "black", width: "450px" }}>{props.t.substring(0, 70)}</p></b><p className="username1">Asked By {props.u}</p><p className="date">{props.create !== null ? format(props.create) : "July 2021"}</p>  </a>
+                    <a href={`/ques/${props.i}/${props.doc_name}/${props.u}`}><b><p style={{ color: "black", width: "450px" }}>{props.t.substring(0, 70)}</p></b><p className="username1">Asked By {props.u}</p><p className="date">{props.time !== undefined ? format(props.time) : "July 2021"}</p>  </a>
 
 
                     {CD ? <Countdown time={props.time} d={props.doc_name} idx={props.index} id={props.i} /> : null}

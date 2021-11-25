@@ -417,14 +417,16 @@ input[type="file"] {
   position: relative;
   height: 25px;
   border: none;
-  width: 100%;
+  width: 90%;
   cursor: pointer;
+  padding-left: 15px;
 }
 
 .checkbox_file:hover {
   background: #ededed;
 }
 .active {
+  width: 90%;
   background-color: #dddddd;
 }
 
