@@ -91,7 +91,7 @@ function SignIn(props) {
             login(userP).then(res => {
                 if (res) {
                     userHasAuthenticated(true);
-                    history.push("/file")
+                    history.push("/community")
                 }
                 else {
                     setsignpara(true);

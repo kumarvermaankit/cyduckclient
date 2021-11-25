@@ -69,7 +69,7 @@ function NavigationBar() {
     await localStorage.removeItem('usertoken')
     userHasAuthenticated(false);
 
-    history.push("/signin");
+    history.push("/home");
   }
 
 

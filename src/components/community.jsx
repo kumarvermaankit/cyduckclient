@@ -385,7 +385,7 @@ function Community(props) {
     function Quesdiv(props) {
 
 
-
+        { console.log(props.create) }
         return (
 
             <div style={{ display: "flex" }}>
