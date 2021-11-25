@@ -826,11 +826,11 @@ function Qcode() {
 
 
       <div className="importcard" key={props.i} >
-        <div className="c_header"><a onClick={() => Showall(props.i)}><p style={{ padding: "13px" }}><b>{props.t}</b></p></a><a href={`/pro_file/${props.u}`} className="username">~{props.u}</a>
+        <div className="c_header"><a onClick={() => Showall(props.i)}><p style={{ padding: "13px" }}><b>{props.t}</b></p></a>   <a href={`/pro_file/${props.u}`} className="username">~{props.u}</a>
           {props.doc_name !== "extra" ? CD ? <Countdown time={props.time} d={props.doc_name} idx={props.index} /> : <p>0</p> : null}
         </div>
 
-        <Card.Text className="questionid">id:{props.i}</Card.Text>
+        {/* <Card.Text className="questionid">id:{props.u}</Card.Text> */}
 
         <Card.Body>
           {/* <p className="linkshowpara">Links:</p>

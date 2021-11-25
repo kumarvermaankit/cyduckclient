@@ -250,11 +250,11 @@ input[type="file"] {
   color: black;
 }
 
-img {
+/* img {
   margin: 20px;
   width: 310px;
   height: 300px;
-}
+} */
 
 .headcard {
   min-height: 30px;
@@ -381,9 +381,18 @@ img {
 
 .keyword_btn {
   width: 140%;
-  border: none;
-  background: #bdd4de;
-  font-size: 80%;
+  
+  background: #142F43;
+  font-size: 100%;
+  color:#fff;
+  padding-bottom: 4%;
+  border-color: white;
+}
+
+.keyword_btn:hover{
+  color:#142F43;
+  background-color: white;
+  border-color:#142F43 ;
 }
 
 .keyword_div {
@@ -503,20 +512,26 @@ img {
 
 .send-button {
   color: white;
-  background-color: #0095ff;
+  background-color: #142F43;
   position: relative;
-
+  /* margin-left: 38.5%; */
   bottom: 60px;
   width: 218px;
-  height: 54px;
+  height: 53px;
   z-index: 0;
   padding: 0;
-  font-size: 32px;
+  font-size: 22px;
   margin-bottom: 0px;
-  border: none;
-  border-radius: 10px;
-  border: none;
+  border-color: white;
+  border-radius: 0px;
+ 
   transform: scale(0.9);
+}
+
+.send-button:hover{
+  background-color: white;
+  color:#142F43;
+  border-color: #142F43;
 }
 
 .close_btn:hover {
@@ -609,8 +624,8 @@ input[id="others"] {
   width: 215px;
   height: 35px;
   margin-bottom: 30px;
-  border-radius: 10px;
-  background: #0095ff;
+  border-radius: 0px;
+  background: #142F43;
 }
 .exgrtra_div {
   width: 1224px;

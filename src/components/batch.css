@@ -19,6 +19,9 @@
   width: 300px;
   height: 300px;
 }
+.card-btn{
+  color:black
+}
 
 .card-box {
   margin: 40px 144px;
@@ -70,18 +73,25 @@
 }
 
 .card-box .card-title1 {
-  color: rgb(254, 183, 36);
+  color: #142F43
 }
 
 .card-box .card-btn1 {
-  background: rgb(254, 183, 36);
-  border-color: rgb(254, 183, 36);
+  /* background: rgb(254, 183, 36);
+
+  border-color: rgb(254, 183, 36); */
+color:white;
+  background-color:#142F43 ;
+  border-color: black;
 }
 
 .card-box .card-btn1:hover {
-  background: #fff;
+  /* background: #fff;
   color: rgb(254, 183, 36);
-  border: 3px solid rgb(254, 183, 36);
+  border: 3px solid rgb(254, 183, 36); */
+  background: #fff;
+  color: #142F43;
+  border-color: #142F43;
 }
 
 .card-box .card-title2 {

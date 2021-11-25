@@ -106,8 +106,11 @@ function NavigationBar() {
     else if (((l1.toString().substr((l1.toString().length - ("/faq").length), ("/faq").length)) == "/faq")) {
       setcurrentpage("faq")
     }
+    else if (((l1.toString().substr((l1.toString().length - ("/home").length), ("/home").length)) == "/home")) {
+      setcurrentpage("home")
+    }
     else {
-      setcurrentpage("Question")
+      setcurrentpage("other")
     }
 
     if (decoded) {
@@ -317,7 +320,7 @@ function NavigationBar() {
       <div className="groups">
         {groups.map((each) => {
           return (
-           <div className="group_list" onClick={dropNavbar}><a href={`/groups/${each}`} style={{ color: "black" }} >{each.toUpperCase()}</a>{community.includes(each) === true ? <DoneIcon style={{ color: "black", width: "15px", height: "15px", marginLeft: "17%" }} /> : null}</div>
+            <div className="group_list" onClick={dropNavbar}><a href={`/groups/${each}`} style={{ color: "black" }} >{each.toUpperCase()}</a>{community.includes(each) === true ? <DoneIcon style={{ color: "black", width: "15px", height: "15px", marginLeft: "17%" }} /> : null}</div>
           )
         })}
       </div>
@@ -350,7 +353,7 @@ function NavigationBar() {
 
 
 
-          <img src={logo} className="navLogo"/>
+          {/* <img src={logo} className="navLogo" /> */}
           <Navbar.Brand className="cyducktitle" href="/home" ><p><b>Cy<span>duck</span></b></p></Navbar.Brand>
 
 

@@ -1,15 +1,30 @@
 import React from "react";
-import "./home.css"
+import "./home2.css"
 import { useHistory } from "react-router-dom";
-import ScrollAnimation from 'react-animate-on-scroll';
-import cyduck from "./circle-cropped2.png"
+import Carousel from 'react-bootstrap/Carousel'
+import 'font-awesome/css/font-awesome.min.css'
+
+import Check from "@material-ui/icons/CheckCircle"
+import Code from "@material-ui/icons/CodeRounded"
+import Group from "@material-ui/icons/GroupRounded"
+// import ScrollAnimation from 'react-animate-on-scroll';
+// import cyduck from "./circle-cropped2.png"
 
 import TelegramIcon from '@material-ui/icons/Telegram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-import m from "./Drop-it.mp4"
+
 import TwitterIcon from '@material-ui/icons/Twitter';
-import TypeWriter from 'react-typewriter';
+// import TypeWriter from 'react-typewriter';
+// import biz from "./images/bizinsider.png"
+// import dog from "./images/dog-img.jpg"
+// import lady from "./images/lady-img.jpg"
+// import mashable from "./images/mashable.png"
+// import tech from "./images/TechCrunch.png"
+// import tnw from "./images/tnw.png"
+
+
+// import FontAwesomeIcon from "@fortawesome/fontawesome-svg-core"
 
 import "animate.css"
 
@@ -37,139 +52,223 @@ function StartingPage() {
     }
 
     return (
-        <div className="homediv" >
+        <div className="homediv">
 
-            <div className="box">
+            <section class="colored-section" id="title">
 
+                <div class="container-fluid">
 
-
-                <div className="writer">
-
-
-                    <h2 style={{ fontSize: "90px" }}>CyDuck</h2>
-
-
-
-
-                    <div className="cyduck_bio">
-                        {/* <h2>We ensure easy clarifications</h2> */}
-                        <p className="cyduck_desc">Cyduck is a developer community to exchange your doubts and thoughts over various challenges and queries on programming along with some monetary benefits.</p>
+                    <div className="writer" >
+                        <h2 style={{ fontSize: "90px" }}>CyDuck</h2>
                     </div>
-                    <form action="" method="get">
-                        {tkn === null ? <a className="strlinks" href="/signin"  >Get Started</a> : null}
-                        {tkn !== null ? <a className="strlinks" style={{ paddingLeft: "13px" }} href="/community">Answer Question</a> : <a className="strlinks2" style={{ paddingLeft: "13px", paddingTop: "10px" }} href="/community">Answer Questions</a>}
 
-                    </form>
 
-                    <a className="strlinks try" href="/file" >Ask Question</a>
+
+
+
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <h1 class="big-heading">Pay and get your doubts resolved instantly.</h1>
+                            <a type="button" class="btn btn-outline-light btn-lg download-button" href={tkn === null ? `/signin` : `/file`} >
+                                Ask Question </a>
+                            <a type="button" class="btn btn-outline-light btn-lg download-button" href={tkn === null ? `/signin` : `community`} >
+                                Answer Question </a>
+                        </div>
+
+                        <div class="col-lg-6">
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-
-                {/* <video className="intro_video" controls="play pause" /> */}
-            </div>
-
-            <div className="about-us">
-
-                <ScrollAnimation animateIn="fadeInLeft">
-                    <h2>What do we do?</h2>
+            </section>
 
 
-                    <div className="about-content">
-                        <img src={cyduck} alt="" />
-                        <h4>We allow users to post their doubts on our platform using different mediums for free or by paying.<p>then other users can answer their question, and redeem the amount paid by the user</p></h4>
 
+
+            <section class="white-section" id="features">
+
+                <div class="container-fluid" style={{ textAlign: "center" }}>
+
+                    <div class="row">
+                        <div class="feature-box col-lg-4" >
+                            <Code style={{ width: "50px", height: "50px" }} />
+
+                            <h3 class="feature-title" >Easy to use.</h3>
+                            <p >Easy to use Editor with screen recording option to ask queries in video format .</p>
+                        </div>
+
+                        <div class="feature-box col-lg-4"  >
+                            <Group style={{ width: "50px", height: "50px" }} />
+                            <h3 class="feature-title">Community</h3>
+                            <p>A great community to share the thoughts and clear doubts.</p>
+                        </div>
+
+                        <div class="feature-box col-lg-4"  >
+                            <Check style={{ width: "50px", height: "50px" }} />
+                            <h3 class="feature-title">Guaranteed answers.</h3>
+                            <p>Find the solution of your doubts in limited time frame.</p>
+                        </div>
                     </div>
 
 
-                </ScrollAnimation>
+                </div>
+            </section>
 
 
 
-            </div>
+            <div><p className="wded">What do we do</p></div>
+            <section class="colored-section" id="testimonials" style={{ height: "500px", background: "#142F43" }}>
 
-            {/* <div className="payment">
-                <ScrollAnimation animateIn="fadeInLeft"  >
-                    <h2>Payment Scheme</h2>
 
-                    <div className="paymentcontain">
+                <Carousel  >
+                    <Carousel.Item interval={1000}>
+                        <img
+                            className="d-block w-100"
+                            src="holder.js/800x400?text=First slide&bg=373940"
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>First slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="holder.js/800x400?text=Second slide&bg=282c34"
+                            alt="Second slide"
+                        />
 
-                        <div className="payment-box">
-                            <div className="icon"><i className="fa fa-inr" aria-hidden="true"></i></div>
-                            <div className="content">
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="holder.js/800x400?text=Third slide&bg=20232a"
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Third slide label</h3>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+
+            </section>
+
+
+
+
+            {/* <section class="colored-section" id="press">
+                <img class="press-logo" src={tech} alt="tc-logo" />
+                <img class="press-logo" src={tnw} alt="tnw-logo" />
+                <img class="press-logo" src={biz} alt="biz-insider-logo" />
+                <img class="press-logo" src={mashable} alt="mashable-logo" />
+
+            </section> */}
+
+
+
+
+
+
+            <section class="white-section" id="pricing">
+
+                <h2 class="section-heading">Available Plans for Users</h2>
+
+
+                <div class="row">
+
+                    <div class="pricing-column col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="card-header">
                                 <h3>Free</h3>
-                                <p>You can ask your question for free without any time frame</p>
-
                             </div>
+                            <div class="card-body">
+                                <h2 class="price-text">Free</h2>
+                                <p>Post your question for free</p>
 
-
-                        </div>
-                        <div className="payment-box">
-                            <div className="icon"><i className="fa fa-inr" aria-hidden="true"></i></div>
-                            <div className="content">
-                                <h3> 3 /6hr</h3>
-                                <p>For Rs. 3 you can get answer to your question within 6 hours </p>
-
-                            </div>
-
-
-                        </div>
-                        <div className="payment-box">
-
-                            <div className="content">
-                                <h3> 5 /3hr</h3>
-                                <p>For Rs. 5 you can get answer to your question within 3 hours</p>
-
+                                <a class="btn btn-lg btn-block btn-outline-dark" href="/file" type="button" >Ask Question</a>
                             </div>
                         </div>
-                        <div className="payment-box">
+                    </div>
 
-                            <div className="content">
-                                <h3> 10 /1hr</h3>
-                                <p>For Rs. 10 you can get answer to your question within 1 hour</p>
+                    <div class="pricing-column col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Bronze</h3>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="price-text">₹ 3</h2>
+                                <p>Get your queries answered in 6 Hr</p>
+
+                                <a class="btn btn-lg btn-block btn-outline-dark" href="/file" type="button" >Ask Question</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-3 col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Silver</h3>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="price-text">₹ 5</h2>
+                                <p>Get your queries answered in 3 Hr</p>
+
+
+                                <a class="btn btn-lg btn-block btn-outline-dark" href="/file" type="button" >Ask Question</a>
 
                             </div>
                         </div>
                     </div>
-                </ScrollAnimation>
-            </div> */}
-
-
-
-            <section id="Contact">
-                <div className="footer">
-                    <div className="footer-basic">
-                        <footer>
-                            <div className="footer-left">
-                                <div className="addf">
-                                    <p className="fhead">Visit Us: </p>
-                                    <p className="fintro">Plot no. 69, Sector-32,
-                                        <br />Gurugram, Haryana-122022</p></div>
-                                <div className="addf"> <p className="fhead">Contact Us: </p>
-                                    <p className="fintro">+91-9555418627</p></div>
-                                <div className="addf"><p className="fhead">Email Us:</p>
-                                    <p className="fintro">cyduck1@gmail.com</p></div>
+                    <div class="pricing-column col-lg-3 col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Gold </h3>
                             </div>
+                            <div class="card-body">
+                                <h2 class="price-text">₹ 10</h2>
+                                <p>Get your queries answered in 1 Hr</p>
 
-                            <div className="footer-right">
-                                <ul className="list-inline">
-                                    <li className="list-inline-item"><a href="#">Get in Touch</a></li>
-                                </ul>
-                                <div className="social">
-                                    <a href="https://t.me/joinchat/xrbUyk1degk5OTll" target="_blank"><i className="icon ion-social-instagram" ><TelegramIcon /></i></a>
-                                    <a href="https://www.linkedin.com/company/cyduck/" target="_blank"><i className="icon ion-social-youtube-outline" ><LinkedInIcon /></i></a>
-                                    <a ><i className="icon ion-social-twitter" ></i><TwitterIcon /></a>
-                                    <a href="#" href="https://discord.gg/XJNPaF4b" target="_blank">D</a>
-                                </div>
+
+                                <a class="btn btn-lg btn-block btn-outline-dark" href="/file" type="button" >Ask Question</a>
+
                             </div>
-                            <p className="copyright">Company Name  Cyduck © 2021</p>
-                        </footer>
+                        </div>
                     </div>
 
 
                 </div>
 
             </section>
-        </div>
+
+            <footer class="colored-section" id="footer">
+                <div class="container-fluid">
+                    <div className="footer-right">
+                        <ul className="list-inline">
+                            <h3><li className="list-inline-item"><a href="#" style={{ color: 'white', cursor: "pointer", marginLeft: "27px" }}>Get in Touch</a></li></h3>
+                        </ul>
+                        <div className="social">
+                            <a href="https://t.me/joinchat/xrbUyk1degk5OTll" target="_blank"><i style={{ color: "white" }} className="icon ion-social-instagram" ><TelegramIcon /></i></a>
+                            <a href="https://www.linkedin.com/company/cyduck/" target="_blank"><i style={{ color: "white" }} className="icon ion-social-youtube-outline" ><LinkedInIcon /></i></a>
+                            <a ><i className="icon ion-social-twitter" ></i><TwitterIcon /></a>
+                            <a href="#" href="https://discord.gg/XJNPaF4b" target="_blank">D</a>
+                        </div>
+                    </div>
+                    <p className="copyright" style={{ color: 'white' }}>© Copyright 2021 Cyduck</p>
+                </div>
+            </footer >
+
+        </div >
     )
 }
 
