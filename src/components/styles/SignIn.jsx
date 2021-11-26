@@ -1,25 +1,13 @@
 import React, { useEffect, useState } from "react";
-
 import { useHistory } from "react-router-dom"
-
 import { useAppContext } from "../lib/contextlib";
-
-
 import login from "../UserFunctions";
 import "../styles/Signin.scss"
 import Google from "../googlelogin";
-
 import cyduck from "../cyduck.png";
-
-
 import axios from "axios"
 
-
-
-
-
 function SignIn(props) {
-
     const [signpara, setsignpara] = useState(false);
     const { userHasAuthenticated } = useAppContext();
     const [emails, setemails] = useState([])
@@ -27,15 +15,9 @@ function SignIn(props) {
     const [emailval, setemailval] = useState("")
     const [userP, setUserP] = useState({
         email: "",
-
         password: "",
     });
-
-
     const history = useHistory();
-
-
-
 
     useEffect(() => {
         axios.get("https://cyduck2.herokuapp.com/signin/availableinfo")
@@ -86,7 +68,6 @@ function SignIn(props) {
 
         event.preventDefault();
 
-
         if (emailstate === true) {
             login(userP).then(res => {
                 if (res) {
@@ -97,36 +78,15 @@ function SignIn(props) {
                     setsignpara(true);
                 }
             })
-
                 .catch(err => console.log(err));
         }
-
-
-
-
     }
 
 
-
-
-
-
-
-
-
-
-
-
     return (
-
         <div >
-
             <div className="login-container" id="divsign">
-
-
                 {/* <Facebook /> */}
-
-
                 <form onSubmit={OnSubmit} >
 
                     <p class="header" ><b>LOG IN !</b></p>
