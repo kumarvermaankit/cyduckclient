@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import MultiSelect from "react-multi-select-component";
 import SearchIcon from '@material-ui/icons/Search';
-import FilterListIcon from '@material-ui/icons/FilterList';
+
 import { useParams } from "react-router-dom";
 
 export default function Search() {
@@ -96,67 +96,14 @@ export default function Search() {
     }
 
   }
-  var languagem = ["JavaScript", "Python",
-    "HTML",
-    "CSS",
-    "C++",
-    "Java",
-    "Kotlin",
-    "C#",
-    "Perl",
-    "PHP",
-    "Swift",
-    "MATLAB",
-    "SQL",
-    "R",
-    "Golang",
-    "Ruby",
-    "TypeScript",
-    "Rust",
-    "Scheme",
-    "Scala"
-  ]
+  var languagem = ['C#', 'C++', 'CSS', 'Golang', 'HTML', 'Java', 'Javascript', 'Kotlin', 'MATLAB', 'PHP', 'Perl', 'Python', 'R', 'Ruby', 'Rust', 'SQL', 'Scala', 'Scheme', 'Swift', 'Typescript']
 
-  var fieldsm = [
-    "Computer Networking",
-    "Computer Software",
-    "Cloud computing",
-    "Cyber Security",
-    "Data Science",
-    "Operating system",
-    "Web Development",
-    "Graphics design",
-    "Artificial intelligence",
-    "DBMS",
-    "Game development",
-    "UI & UX",
-    "3D design",
-    "Cryptography",
-    "Mobile App Development",
-    "SEO"
-  ]
 
-  var framem = [
-    "React",
-    "ASP.NET",
-    "Ruby",
-    "AngularJS",
-    "Django",
-    "Spring",
-    "Express",
-    "Flask",
-    "Tensor Flow",
-    "CNTK",
-    "Theano",
-    "Torch",
-    "Swiftic",
-    "Native",
-    "React-Native",
-    "Ionic",
-    "Adobe PhoneGap",
-    "Flutter",
-    "JQuery Mobile"
-  ]
+
+  var fieldsm = ['3D design', 'Artificial intelligence', 'Cloud computing', 'Computer Networking', 'Computer Software', 'Cryptography', 'Cyber Security', 'DBMS', 'Data Science', 'Game development', 'Graphics design', 'Mobile App Development', 'Operating system', 'SEO', 'UI & UX', 'Web Development']
+
+
+  var framem = ['ASP.NET', 'Adobe PhoneGap', 'AngularJS', 'CNTK', 'Django', 'Express', 'Flask', 'Flutter', 'Ionic', 'JQuery Mobile', 'Native', 'React', 'React-Native', 'Ruby', 'Spring', 'Swiftic', 'Tensor Flow', 'Theano', 'Torch']
   function languagemaker() {
     return (
       <div>

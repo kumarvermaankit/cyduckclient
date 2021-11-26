@@ -948,7 +948,7 @@ function File(props) {
             return (
               <div className="flx">
 
-                <input className="checkbox_file" style={{ marginLeft: "10px", fontSize: "15px" }} onClick={(event) => dropValueGetter(event, 3)} readOnly={true} value={e} />
+                <input className="checkbox_file" style={{ marginLeft: "10px", fontSize: "15px", paddingLeft: "0px" }} onClick={(event) => dropValueGetter(event, 3)} readOnly={true} value={e} />
               </div>
             )
           })

@@ -27,10 +27,10 @@ export default function UnauthenticatedRoute({ children, ...rest }) {
   const redirect = querystring("redirect");
   return (
     <Route {...rest}>
-      {(!isAuthenticated)? (
+      {(!isAuthenticated) ? (
         children
       ) : (
-        <Redirect to={redirect === "" || redirect === null ? "/file" : redirect} />
+        <Redirect to={redirect === "" || redirect === null ? "/home" : redirect} />
       )}
     </Route>
   );

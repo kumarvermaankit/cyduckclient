@@ -820,13 +820,12 @@ function Qcode() {
 
   function Quesdiv(props) {
 
-    var time = Date.parse(props.time)
-    var currenttime = Date.parse(new Date())
+
     return (
 
 
       <div className="importcard" key={props.i} >
-        <div className="c_header"><a onClick={() => Showall(props.i)}><p style={{ padding: "13px" }}><b>{props.t}</b></p></a><a href={`/pro_file/${props.u}`} className="username">~{props.u}</a>
+        <div className="c_header"><a onClick={() => Showall(props.i)}><p style={{ padding: "13px", cursor: "text" }}><b>{props.t}</b></p></a><a href={`/pro_file/${props.u}`} className="username">~{props.u}</a>
           {props.doc_name !== "extra" ? CD ? <Countdown time={props.time} d={props.doc_name} idx={props.index} /> : <p>0</p> : null}
         </div>
 
@@ -995,7 +994,7 @@ function Qcode() {
         {
           tkn !== null ? <div className="afterloginbuttons">
             <Button id="answer_btn" variant="primary" style={{ marginRight: "80px" }} onClick={() => AddAnswers()}><svg className="bts">
-              <rect x="0" y="0" fill="none" width="100%" height="100%" />
+              {/* <rect x="0" y="0" fill="none" width="100%" height="100%" /> */}
             </svg>Add</Button></div> : null}
         {answer ? <div>
           {/* <input className="descinput" id="titleinput" placeholder="Add Title of your answer" onChange={(event)=>change1(event.target.value)}/> */}
