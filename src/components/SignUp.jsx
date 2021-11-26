@@ -131,7 +131,7 @@ function SignUp(props) {
 
         <div>
 
-            <div className="signup-container">
+            {/* <div className="signup-container">
 
 
                 <form onSubmit={OnSubmit} >
@@ -145,7 +145,7 @@ function SignUp(props) {
                     </div>
                     <div >
                         <label><h3><b>Username</b></h3></label>
-                        <input id="inputelement2s" style={{ height: "50px" }} type="text" name="username" value={userP.username} onChange={(event) => OnChange(event, 2)} onFocus={() => setuserstate(true)} required="true" autoComplete="off" />
+                        <input id="inputelement2s" style={{ height: "50px" }} type="text" name="username" value={userP.username} onChange={(event) => OnChange(event, 2)} onFocus={() => setuserstate(true)} required="true" auoCtomplete="off" />
                         {userstate !== undefined ? userstate ? <p className="checkpara1" style={{ top: "30px", left: "42px" }} >Available</p> : <p className="checkpara" style={{ top: "30px", left: "42px" }}>Not available</p> : null}
                     </div>
                     <div >
@@ -166,7 +166,87 @@ function SignUp(props) {
                 <img className="cyduck_in" src={cyduck} alt="" />
                 <a id="signupoption" href="/signin"><p>LogIn</p></a>
                 <Google />
+            </div> */}
+
+            <div className="signupPage">
+                <div className="signupContainer">
+                    <h1>SignUp</h1>
+                    <div className="input_sign">
+                        <label className="email">Email</label>
+                        <br />
+                        <input className="input"
+                            id="email"
+                            v-model="email"
+                            text="email"
+                            placeholder="Your email address"
+
+                            type="email" name="email" value={userP.email} onChange={(event) => OnChange(event, 1)} onFocus={() => setemailstate(true)} required="true" autoComplete="off"
+
+                        >
+                        </input>
+                        {emailstate !== undefined ? emailstate ? <p className="checkpara1"  >Available</p> : <p className="checkpara" >Not available</p> : <p style={{ visibility: "hidden" }} className="checkpara" >Not available</p>}
+                    </div>
+
+                    <div className="input_sign">
+                        <label className="email">Username</label>
+                        <br />
+                        <input className="input"
+                            id="email"
+
+
+                            placeholder="Your Username"
+
+                            type="text" name="username" value={userP.username} onChange={(event) => OnChange(event, 2)} onFocus={() => setuserstate(true)} required="true" auoCtomplete="off"
+
+                        >
+                        </input>
+                        {userstate !== undefined ? userstate ? <p className="checkpara1" >Available</p> : <p className="checkpara" >Not available</p> : <p style={{ visibility: "hidden" }} className="checkpara" >Not available</p>}
+                    </div>
+
+
+                    <div className="input_sign">
+                        <label className="password">Password</label>
+                        <br />
+                        <input className="input"
+                            id="password"
+                            v-model="password"
+                            type="password"
+                            placeholder="Your Password"
+
+
+
+                            type="password" name="password" value={userP.password} onChange={(event) => OnChange(event, 0)} required="true" autoComplete="off"
+                        >
+                        </input>
+                    </div>
+                    {/* <div>
+                        <label className="verifypassword">
+                            Confirm Password
+                        </label>
+                        <br />
+                        <input className="input"
+                            id="verifyPassword"
+                            v-model="password"
+                            type="password"
+                            placeholder="Confirm Your Password"
+
+                            onChange={(event) => { checkValidation(event) }}
+                        >
+                        </input>
+                        <div className="verifyPass">
+                            {isError}
+                        </div>
+                    </div> */}
+
+                    <div className="signUp">
+                        <button className="signupBtn">
+                            SignUp
+                        </button>
+                        <p>Already have an account? <a href="">LogIn</a></p>
+                    </div>
+                </div>
             </div>
+
 
         </div>
     )

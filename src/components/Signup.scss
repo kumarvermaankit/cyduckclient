@@ -91,19 +91,21 @@
 }
 
 .checkpara {
-  position: relative;
-  top: 50px;
-  left: 26px;
+  // position: relative;
+  // top: 50px;
+  // left: 26px;
   color: red;
-  font-size: 20px;
+  font-size: 13px;
+  margin: 0px;
 }
 
 .checkpara1 {
-  position: relative;
-  top: 50px;
-  left: 26px;
+  // position: relative;
+  // top: 50px;
+  // left: 26px;
   color: #29bb89;
-  font-size: 20px;
+  font-size: 13px;
+  margin: 0px;
 }
 
 #signinoption {
@@ -138,3 +140,76 @@
 #signupbutton:hover {
   background-color: #0077cc;
 }
+
+
+
+
+
+
+///////////
+
+
+
+.signupPage {
+  width: auto;
+  height: 660px;
+  font-family: "Open Sans", sans-serif;
+}
+.signupContainer {
+  border: 1px solid #687280;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px #9ca3af;
+  align-items: center;
+  background: #fff;
+  width: 413px;
+  height: 455px;
+  margin: 100px auto;
+  transform: scale(1.2);
+}
+.signupContainer h1 {
+  margin: 25px 50px 20px 50px;
+}
+.signupContainer div {
+  margin-left: 50px;
+  margin-top: 8px;
+}
+
+
+// #password {
+//   margin-top: 10px;
+// }
+.signUp p {
+  margin: 0px 0px 0px 41px;
+}
+.signUp a {
+  text-decoration: none;
+}
+.verifyPass{
+  color:#b800008f;
+  float: right;
+  height: 10px;
+  font-size: 12px;
+  margin: 0px 50px;
+  /* font-weight: bolder; */
+}
+
+.signupBtn {
+  color: #fff;
+  width: 282px;
+  height: 42px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 19px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #1f2937;
+}
+.signupBtn:hover {
+  background-color: #374155;
+}
+
+.signUp{
+  margin-top: 50px;
+  }
