@@ -16,6 +16,11 @@
   box-sizing: border-box;
   color: #d5d7de;
   padding: 40px 20px;
+
+  form{
+    width: 60%;
+    height: auto;
+  }
 }
 .login-container h1 {
   text-align: center;
@@ -82,7 +87,7 @@
 }
 
 #inputelement1:hover {
-  background-color: #99a8b2;
+  background-color: #bfd0db;
 }
 #inputelement2:hover {
   background-color: #99a8b2;
@@ -149,11 +154,6 @@
   left: 20px;
   top: 15px;
 }
-
-.header:hover {
-  text-shadow: 5px 10px 5px #050505;
-}
-
 .line {
   background-color: white;
   width: 2px;
@@ -162,7 +162,6 @@
   left: 570px;
   bottom: 330px;
 }
-
 .or {
   position: relative;
   top: 170px;
@@ -170,7 +169,6 @@
   font-size: 70px;
   right: 53.8px;
 }
-
 #signupoption {
   width: 116.7px;
   height: 47px;
@@ -179,21 +177,16 @@
   position: relative;
   top: 220px;
   right: 100px;
-  padding: 5.5px;
-  padding-top: 5px;
-  padding-bottom: 0;
   font-size: 25px;
   border: none;
   text-align: center;
   background-color: #0088ff;
   border-radius: 3px;
 }
-
 #signupoption:hover {
   background-color: #0077cc;
   text-decoration: none;
 }
-
 label:hover {
   text-shadow: 5px 10px 5px #050505;
 }
