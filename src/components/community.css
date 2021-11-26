@@ -75,7 +75,7 @@ a {
   padding-top: 16px;
 }
 
-.btn {
+.btn2 {
   width: 200px;
   height: 50px;
   background-color: #2ec1ac;
@@ -159,6 +159,7 @@ a {
   margin-bottom: 15px;
   transition: 0.4s ease-in-out;
   border-radius: 10px;
+  text-align: left;
 }
 
 .headercard:hover {
@@ -675,7 +676,7 @@ rect:hover {
 .frm {
   height: auto;
   position: absolute;
-  padding-top: 40px;
+  padding-top: 3px;
   padding-left: 25px;
   padding-bottom: 10px;
   top: 100px;

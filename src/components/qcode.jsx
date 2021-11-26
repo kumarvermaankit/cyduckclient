@@ -830,7 +830,7 @@ function Qcode() {
           {props.doc_name !== "extra" ? CD ? <Countdown time={props.time} d={props.doc_name} idx={props.index} /> : <p>0</p> : null}
         </div>
 
-        <Card.Text className="questionid">id:{props.i}</Card.Text>
+        {/* <Card.Text className="questionid">id:{props.u}</Card.Text> */}
 
         <Card.Body>
           {/* <p className="linkshowpara">Links:</p>

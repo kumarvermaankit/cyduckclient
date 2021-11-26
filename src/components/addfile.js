@@ -281,9 +281,9 @@ function File(props) {
 
     // const r=await axios.post(`${url}/upload`,data)
 
-
-
-    const result = await axios.post(`${url}/upload/questioncheck`, { question: question, info: info, keywords: { languages: selectedlang, frameworks: selectedfram, fields: selectedfield }, links: availablelinks, imageinfo: questionimg, communities: selectedcomm })
+    var time = new Date()
+    console.log(time)
+    const result = await axios.post(`${url}/upload/questioncheck`, { question: question, info: info, keywords: { languages: selectedlang, frameworks: selectedfram, fields: selectedfield }, links: availablelinks, imageinfo: questionimg, communities: selectedcomm, time: time })
     if (result) {
       await setFile([])
 
@@ -529,7 +529,7 @@ function File(props) {
             <div className="flx">
               <button
                 className="checkbox_file"
-                style={{ backgroundColor: "green", fontSize: "15px", color: "white", marginLeft: "20px" }}
+                style={{ backgroundColor: "green", fontSize: "15px", color: "white" }}
 
                 type="button"
                 onClick={startRecording}
@@ -542,7 +542,7 @@ function File(props) {
             <div className="flx">
               <button
                 className="checkbox_file"
-                style={{ backgroundColor: "red", fontSize: "15px", color: "white", marginLeft: "20px" }}
+                style={{ backgroundColor: "red", fontSize: "15px", color: "white" }}
                 type="button"
                 onClick={stopRecording}
 
@@ -637,7 +637,6 @@ function File(props) {
 
   const token = localStorage.getItem("usertoken")
   const decoded = jwt_decode(token)
-
 
 
 
@@ -1052,7 +1051,7 @@ function File(props) {
     )
   }
 
-  console.log(paymentstate)
+
 
 
   function paymentalert(event, a) {
