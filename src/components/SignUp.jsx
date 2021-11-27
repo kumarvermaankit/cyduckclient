@@ -243,6 +243,7 @@ function SignUp(props) {
                             SignUp
                         </button>
                         <p>Already have an account? <a href="">LogIn</a></p>
+
                     </div>
                 </div>
             </div>

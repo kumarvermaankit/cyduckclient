@@ -344,8 +344,9 @@ function NavigationBar() {
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a className="dropdown-item" href={`/pro_file/${decoded.data.username}`}>Profile</a></li>
-              <li><a className="dropdown-item" style={{ cursor: "pointer" }} onClick={Logout} >Logout<ExitToAppIcon style={{ height: "25px", width: "25px" }} /></a></li>
               <li><a className="dropdown-item" href={`/myq`}>My Questions</a></li>
+              <li><a className="dropdown-item" style={{ cursor: "pointer" }} onClick={Logout} >Logout<ExitToAppIcon style={{ height: "25px", width: "25px" }} /></a></li>
+
 
             </ul>
           </div>
@@ -434,7 +435,7 @@ function NavigationBar() {
     return (
       <div >
         <Navbar expand="lg" id="nav_bar" >
-          <img src={logo} className="navLogo" id='navLogoBefore' />
+
           <Navbar.Brand className="cyducktitle" href="/home" ><p><b>Cy<span>Duck</span></b></p></Navbar.Brand>
 
           {/* <form className="frm1" onSubmit={Search}>
