@@ -175,7 +175,20 @@
 }
 
 .input_sign input{
+  
+  height: 33px;
+ 
+
+  padding-left: 10px;
+  border: none;
+  color: #374151;
+  border-radius: 3px;
+  background-color: #e4e8eb;
   width: 87%;
+}
+
+.input_sign input:hover{
+  box-shadow: 2px 2px 4px #6b7280;
 }
 
 // #password {

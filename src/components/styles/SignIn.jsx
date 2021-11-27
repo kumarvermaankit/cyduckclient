@@ -85,8 +85,8 @@ function SignIn(props) {
 
     return (
         <div >
-            <div className="login-container" id="divsign">
-                {/* <Facebook /> */}
+            {/* <div className="login-container" id="divsign">
+              
                 <form onSubmit={OnSubmit} >
 
                     <p class="header" ><b>LOG IN !</b></p>
@@ -99,7 +99,7 @@ function SignIn(props) {
 
                     <div className="flexdiv">
                         <label className="inputlabel"><h3 ><b>Password</b></h3></label>
-                        <input id="inputelement2" className="signinput" type="password" name="password" value={userP.password} onChange={(event) => OnChange(event, 0)} required="true" autoComplete="off" />
+                        <input id="inputelement2" className="signinput" type="password" name="password" value={userP.} passwordonChange={(event) => OnChange(event, 0)} required="true" autoComplete="off" />
                     </div>
                     <div>
                         {signpara ? <p className="cred">Password and Email does not match </p> : null}
@@ -120,7 +120,33 @@ function SignIn(props) {
                 <img className="cyduck_in" src={cyduck} alt="" />
                 <a id="signupoption" href="/signup"><p>SignUp</p></a>
                 <Google />
+            </div> */}
+
+            <div className="loginPage">
+                <div className="loginContainer">
+                    <h1>Login</h1>
+                    <div>
+                        <label className="email">Email</label>
+                        <br />
+                        <input className="inputv" id="email" v-model="email" type="email" placeholder="Your email address" type="email" name="email" value={userP.email} onChange={(event) => OnChange(event, 1)} onFocus={() => emailstate ? setemailstate(true) : setemailstate(false)} required="true"></input>
+                    </div>
+                    <div>
+                        <label className="password">Password</label>
+                        <br />
+                        <input className="inputv" id="password" placeholder="Your Password" type="password" name="password" value={userP.password} onChange={(event) => OnChange(event, 0)} required="true" autoComplete="off" ></input>
+                    </div>
+
+                    <div className="login" onClick={OnSubmit}>
+                        <button className="loginBtn">
+                            Log in
+                        </button>
+                        <p>New User ? <a href="/signup">SignUp</a></p>
+                    </div>
+
+                </div>
             </div>
+
+
         </div>
     )
 }

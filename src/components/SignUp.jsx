@@ -239,10 +239,11 @@ function SignUp(props) {
                     </div> */}
 
                     <div className="signUp">
-                        <button className="signupBtn">
+                        <button className="signupBtn" onClick={(event) => OnSubmit(event)}>
                             SignUp
                         </button>
-                        <p>Already have an account? <a href="">LogIn</a></p>
+                        <p>Already have an account? <a href="">LogIn</a>
+                        </p>
 
                     </div>
                 </div>
