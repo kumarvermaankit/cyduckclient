@@ -2,9 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Oi&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
 * {
   font-family: 'Zen Kurenaido', sans-serif;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+*{
+  font-family: 'Shippori Antique', sans-serif;
 }
 
 html {

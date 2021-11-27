@@ -136,7 +136,7 @@ function SignIn(props) {
                         <input className="inputv" id="password" placeholder="Your Password" type="password" name="password" value={userP.password} onChange={(event) => OnChange(event, 0)} required="true" autoComplete="off" ></input>
                     </div>
 
-                    <div className="login" onClick={OnSubmit}>
+                    <div className="login" onClick={(event) => OnSubmit(event)}>
                         <button className="loginBtn">
                             Log in
                         </button>
