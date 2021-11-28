@@ -996,18 +996,33 @@ function File(props) {
     if (a === 1) {
 
       lngdd ? setlngdd(false) : setlngdd(true)
+      setfrdd(false)
+      setfdd(false)
+      setcdd(false)
     }
 
     else if (a === 2) {
       frdd ? setfrdd(false) : setfrdd(true)
+      setlngdd(false)
+      setfdd(false)
+      setcdd(false)
+
     }
 
     else if (a === 3) {
       fdd ? setfdd(false) : setfdd(true)
+      setfrdd(false)
+      setlngdd(false)
+      setcdd(false)
+
     }
 
     else if (a === 4) {
       cdd ? setcdd(false) : setcdd(true)
+      setfrdd(false)
+      setfdd(false)
+      setlngdd(false)
+
     }
 
   }
