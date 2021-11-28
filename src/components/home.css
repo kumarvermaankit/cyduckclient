@@ -113,7 +113,7 @@
   height: 108px;
   border-right: 0.05em solid orange;
   white-space: nowrap;
-  width: 435px;
+  width: 270px;
   letter-spacing: 0.15em;
   animation: typing 2.5s steps(30, end), blink-caret 0.35s step-end infinite;
   -moz-animation-iteration-count: infinite;
@@ -142,11 +142,15 @@
   }
 }
 
+.writer{
+  width:340px;
+}
+
 .writer h4 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   text-transform: capitalize;
-  width: 600px;
+  width: 400px;
   color: #000;
   position: absolute;
   top: 110%;
@@ -553,3 +557,4 @@
     padding-top: 3px;
   }
 }
+

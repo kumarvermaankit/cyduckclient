@@ -941,7 +941,7 @@ function Qcode() {
       <div className="text-editor">
         <div className="hidetoolbar" id="givencode"></div>
         <div style={{ display: "flex" }}>
-          <Tinymce set={valuesetter} t={givencode} height="950px" />
+          <Tinymce set={valuesetter} t={givencode} height="950px" minheight={0} maxheight={950} />
           <div>
             {editcode ? <p className="editpara">Editable</p> : null}
             {editcode ? <button className="code_save" onClick={(event) => EditCode(event)}>Save</button> : null}
@@ -1001,7 +1001,7 @@ function Qcode() {
 
           <div className="text-editor_answer">
 
-            <Tinymce set={change2} height="520px" width="1100px" />
+            <Tinymce set={change2} height="520px" width="1100px" minheight={520} maxheight={520} />
 
           </div>
 

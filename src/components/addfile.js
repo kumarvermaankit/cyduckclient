@@ -1124,7 +1124,8 @@ function File(props) {
               style={{ marginLeft: "50px" }}
               set={valuesetter}
               height="608px"
-
+              minheight={608}
+              maxheight={608}
               alert={setalertbox2}
             />
 
