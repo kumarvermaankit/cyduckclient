@@ -1133,7 +1133,7 @@ function File(props) {
 
           <div className="tinymce">
             <input className="descinput" placeholder="Add Title of Question" onChange={(event) => descset(event)} />
-            {/* 
+
             <Tinymce
 
               style={{ marginLeft: "50px" }}
@@ -1142,7 +1142,7 @@ function File(props) {
               minheight={608}
               maxheight={608}
               alert={setalertbox2}
-            /> */}
+            />
 
 
 
@@ -1187,7 +1187,7 @@ function File(props) {
             <div>
               <h3 style={{ fontSize: "13px", marginLeft: "40px" }}>Click Twice to Open </h3>
               <h3 style={{ fontSize: "13px", marginLeft: "40px" }}>Give Permission to both screen and mic to record</h3>
-              <Recorder />
+              {/* <Recorder /> */}
             </div>
 
 
