@@ -1177,7 +1177,7 @@ function File(props) {
 
             <div className="keyword_div">
               <button onClick={(event) => { selectClick(event, 4) }} className="keyword_btn" >Community</button>
-              {cdd ? <div className="keyword_containerdiv">
+              {cdd ? <div className="keyword_containerdiv2">
                 {communitymaker()}
 
               </div> : null}

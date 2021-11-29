@@ -373,6 +373,25 @@ input[type="file"] {
   }
 }
 
+
+.keyword_containerdiv2{
+  animation-name: sopen;
+  animation-duration: 0.5s;
+  width: 140%;
+  max-height: 103px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@keyframes sopen {
+  from {
+    height: 0px;
+  }
+  to {
+    height: auto;
+  }
+}
+
 .headerpayment {
   margin: 10px;
   display: inline-block;
