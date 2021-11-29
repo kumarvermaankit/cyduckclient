@@ -161,7 +161,9 @@ function Qcode() {
   }, [rp])
 
 
-  console.log(Cookies.prototype.get("cookie-name"))
+
+
+  // console.log(Cookies.prototype.get("cookie-name"))
 
 
   useEffect(() => {

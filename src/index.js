@@ -14,7 +14,7 @@ import App from './App';
 ReactDOM.render(
 
   <Router >
-    <CookiesProvider>
+    <CookiesProvider >
       <App />
     </CookiesProvider>
   </Router>,
