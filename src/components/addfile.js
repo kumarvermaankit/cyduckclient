@@ -1133,7 +1133,7 @@ function File(props) {
 
           <div className="tinymce">
             <input className="descinput" placeholder="Add Title of Question" onChange={(event) => descset(event)} />
-
+            {/* 
             <Tinymce
 
               style={{ marginLeft: "50px" }}
@@ -1142,7 +1142,7 @@ function File(props) {
               minheight={608}
               maxheight={608}
               alert={setalertbox2}
-            />
+            /> */}
 
 
 
