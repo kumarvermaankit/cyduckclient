@@ -986,3 +986,16 @@ rect:hover {
   margin-left: 700px;
 
 }
+
+.join{
+  width:5%;
+  font-size:20px;
+  border-color: white;
+  position: absolute;
+  right: 70px;
+}
+
+.join:hover{
+background-color: rgb(177, 177, 177);
+
+}

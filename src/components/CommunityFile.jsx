@@ -2,7 +2,7 @@
 
 import Community from "./community"
 
-function CommunityFile() {
+function CommunityFile(props) {
 
     const url2 = `http://localhost:5000`
 

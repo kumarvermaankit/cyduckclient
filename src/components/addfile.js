@@ -287,7 +287,7 @@ function File(props) {
     if (result) {
       await setFile([])
 
-      history.push("/community", { from: "/file" })
+      history.push("/community/1", { from: "/file" })
 
 
     }

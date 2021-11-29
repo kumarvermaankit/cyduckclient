@@ -14,7 +14,7 @@ import gold from "./goldl2x.png"
 import silver from "./silverl2x.png"
 import bronze from "./bronzel2x.png"
 import loadingbuffer from "./loading-buffering.png"
-
+import { Cookies, useCookies } from "react-cookie"
 
 import jwt_decode from "jwt-decode"
 
@@ -25,6 +25,12 @@ function Community(props) {
     const url = `https://cyduck2.herokuapp.com`
 
     let params = useParams();
+
+
+
+    const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
+
+
 
     let history = useHistory();
     var token = localStorage.usertoken
@@ -92,7 +98,7 @@ function Community(props) {
 
     useEffect(() => {
         var l = window.location;
-
+        setCookie("cookie-name", "hello", { val: "1" })
         // if(((l.toString().substr((l.toString().length-("/myq").length),("/myq").length))!=="/myq")){
         //     startTimer()
         // }
@@ -270,7 +276,7 @@ function Community(props) {
 
 
 
-
+    console.log(cookies.name)
 
 
 
@@ -469,7 +475,7 @@ function Community(props) {
                     {
                         pagestatus ? loading ? <img src={loadingbuffer} className="loading_buffer" /> : <Items /> : <h1 style={{ marginLeft: "740px" }}>Not Found</h1>}
                     <div>
-                        {pagestatus ? window.location.toString().includes("groups") && <button onClick={joinStatus ? leaveGroup : joinGroup}>{joinStatus ? "Leave" : "Join"}</button> : null}
+                        {pagestatus ? window.location.toString().includes("groups") && <button className="join" style={{ backgroundColor: joinStatus ? "rgb(248, 123, 123)" : "rgb(106, 243, 106)" }} onClick={joinStatus ? leaveGroup : joinGroup}>{joinStatus ? "Leave" : "Join"}</button> : null}
                     </div>
 
                 </div>

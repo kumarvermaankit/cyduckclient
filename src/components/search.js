@@ -96,7 +96,7 @@ export default function Search() {
     }
 
   }
-  var languagem = ['C#', 'C++', 'CSS', 'Golang', 'HTML', 'Java', 'Javascript', 'Kotlin', 'MATLAB', 'PHP', 'Perl', 'Python', 'R', 'Ruby', 'Rust', 'SQL', 'Scala', 'Scheme', 'Swift', 'Typescript']
+  var languagem = ['C', 'C++', 'CSS', 'Golang', 'HTML', 'Java', 'Javascript', 'Kotlin', 'MATLAB', 'PHP', 'Perl', 'Python', 'R', 'Ruby', 'Rust', 'SQL', 'Scala', 'Scheme', 'Swift', 'Typescript']
 
 
 

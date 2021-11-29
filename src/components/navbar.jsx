@@ -109,6 +109,7 @@ function NavigationBar() {
     else if (((l1.toString().substr((l1.toString().length - ("/home").length), ("/home").length)) == "/home")) {
       setcurrentpage("home")
     }
+
     else {
       setcurrentpage("other")
     }
@@ -345,6 +346,7 @@ function NavigationBar() {
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a className="dropdown-item" href={`/pro_file/${decoded.data.username}`}>Profile</a></li>
               <li><a className="dropdown-item" href={`/myq`}>My Questions</a></li>
+              <li><a className="dropdown-item" href={`/faq`}>FAQ</a></li>
               <li><a className="dropdown-item" style={{ cursor: "pointer" }} onClick={Logout} >Logout<ExitToAppIcon style={{ height: "25px", width: "25px" }} /></a></li>
 
 
@@ -397,7 +399,7 @@ function NavigationBar() {
 
 
           {/* { ((l.toString().substr((l.toString().length-("/editor").length),("/editor").length))!="/editor")? */}
-          <a className={`navitem ${currentpage === "Editor" ? "navitem_active" : null}`} href="/editor" >Editor</a>
+
 
 
 
@@ -406,14 +408,16 @@ function NavigationBar() {
           {/* { (l.toString().substr((l.toString().length-("/community").length),("/community").length))!="/community" && (l.toString().substr((l.toString().length-("/home").length),("/home").length))!="/home"?  */}
           <a href="/community" className={`navitem ${currentpage === "Community" ? "navitem_active" : null}`}  >Community</a>
 
+          <a className={`navitem ${currentpage === "Editor" ? "navitem_active" : null}`} href="/editor" >Editor</a>
+
+          <a className={`navitem ${currentpage === "groups" ? "navitem_active" : null}`} onClick={() => groupstate ? setgroupstate(false) : setgroupstate(true)} style={{ position: "relative", left: "-50px", cursor: "pointer" }} >Groups</a>
+          {groupstate ? renderGroups() : null}
 
 
-          <a className={`navitem ${currentpage === "faq" ? "navitem_active" : null}`} style={{ position: "relative", left: "-50px" }} href="/faq" >FAQ</a>
+
           <div>
 
           </div>
-          <a className={`navitem ${currentpage === "faq" ? "navitem_active" : null}`} onClick={() => groupstate ? setgroupstate(false) : setgroupstate(true)} style={{ position: "relative", left: "-50px", cursor: "pointer" }} >Groups</a>
-          {groupstate ? renderGroups() : null}
 
 
           {/* 

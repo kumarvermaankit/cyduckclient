@@ -26,7 +26,7 @@ import "react-quill/dist/quill.snow.css";
 
 import EditorToolbar2 from "./editor_toolbar"
 import Tinymce from "./tinymce";
-
+import { Cookies, useCookies } from "react-cookie"
 
 function Qcode() {
 
@@ -160,6 +160,8 @@ function Qcode() {
 
   }, [rp])
 
+
+  console.log(Cookies.prototype.get("cookie-name"))
 
 
   useEffect(() => {
@@ -1031,7 +1033,7 @@ function Qcode() {
 
                       <div className="hidetoolbar"></div>
 
-                      <Tinymce t={ans.ans} height="700px" />
+                      <Tinymce t={ans.ans} height="700px" width="1200px" />
 
                     </div>
 
