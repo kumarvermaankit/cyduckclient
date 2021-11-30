@@ -18,6 +18,9 @@ export default function Search() {
   const [selectedfram, setselectedfram] = useState([])
   const [selectedfield, setselectedfield] = useState([])
 
+  const [searchvalue, setsearchvalue] = useState("")
+
+
   function search() {
     var str1 = ""
     var str2 = ""
@@ -70,6 +73,7 @@ export default function Search() {
     if (params.name === undefined) {
       s = `/search/${str1}/${str2}/${str3}`
     }
+
     else {
       s = `/groupsearch/${params.name}/${str1}/${str2}/${str3}`
     }
@@ -77,6 +81,10 @@ export default function Search() {
 
     history.push(s)
 
+  }
+
+  function Stringsearch() {
+    history.push(`/stringsearch/${searchvalue}`)
   }
 
 
@@ -234,10 +242,10 @@ export default function Search() {
 
   return (
     <div className="search_main">
-      <form className="frm" onSubmit={search}>
+      <form className="frm">
         <div className="searchbox">
-          <input id="search" className="searchInput" onMouseUp={(event) => searchfocus(event)} placeholder="Search by ID or string" />
-          <button className="searchButton" type="submit"><SearchIcon /></button>
+          <input id="search" className="searchInput" onMouseUp={(event) => searchfocus(event)} onChange={(event) => setsearchvalue(event.target.value)} placeholder="Search by ID or string" />
+          <button className="searchButton" onClick={Stringsearch}><SearchIcon /></button>
         </div>
         <div className="keyworddiv" style={{ width: "60%" }}>
           {/* <label for="keyword" style={{marginLeft:"440px",fontSize:"35px"}}>Keywords</label> */}
@@ -270,7 +278,7 @@ export default function Search() {
 
 
         </div>
-        <button className="filter_btn" type="submit">Search</button>
+        <button className="filter_btn" onClick={search} type="submit">Search</button>
       </form>
     </div>
   )

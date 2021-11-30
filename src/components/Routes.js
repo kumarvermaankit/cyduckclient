@@ -24,6 +24,9 @@ import FAQ from "./faq"
 import Batch from "./batch"
 import Groups from "./eachCommunity";
 import GroupSearch from "./groupSearch";
+import Stringsearch from "./stringsearch";
+
+
 function Routes() {
 
   return (
@@ -90,7 +93,9 @@ function Routes() {
       <Route exact path="/home">
         <Home />
       </Route>
-
+      <Route exact path="/stringsearch/:string">
+        <Stringsearch />
+      </Route>
 
 
     </Router>
