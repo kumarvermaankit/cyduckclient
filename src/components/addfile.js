@@ -1187,7 +1187,7 @@ function File(props) {
             <div>
               <h3 style={{ fontSize: "13px", marginLeft: "40px" }}>Click Twice to Open </h3>
               <h3 style={{ fontSize: "13px", marginLeft: "40px" }}>Give Permission to both screen and mic to record</h3>
-              {/* <Recorder /> */}
+              <Recorder />
             </div>
 
 
