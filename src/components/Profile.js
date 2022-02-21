@@ -482,31 +482,31 @@ function Profile() {
     <div className="container">
 
       <div className="mp">
-        <div style={{ display: "flex" }}>
+        <div>
 
           <img className="mainprofile" src={psrc === null || psrc === undefined || psrc === "" ? "https://firebasestorage.googleapis.com/v0/b/cyduck-3be89.appspot.com/o/images%2Fprofile1.jpg?alt=media&token=52193340-cd44-425d-9484-6fc68b7466a9" : psrc} />
 
-          <div style={{ display: "flexbox" }}>
+          <div>
             <input className="inpt f" type="file" accept="image/*" />
             {/* {tkn!==null?decoded.data.username===params.username?<label for="file" className="lab" onClick={openwindow}><ImageSearchIcon /></label>:null:null} */}
             <Imagewindow />
           </div>
         </div>
+
+  <div>
+        <div>
         <p className="progress_info">{anslength - info.answered.length} questions to reach next level</p>
+
+        </div>
         <div className="progress">
-
-
           <div style={{ width: `${(info.answered.length / anslength) * 100}%`, height: "100%", backgroundColor: "blue" }}></div>
           <div style={{ width: `${100 - ((info.answered.length / anslength) * 100)}%`, height: "100%", backgroundColor: "white" }}></div>
-
-
-
         </div>
         <div className="progress_para">
           <p style={{ color: "white" }}>{anslength}</p>
         </div>
 
-
+ </div>
 
         <div className="skilldiv">
           <div style={{ display: "flex" }}>
@@ -523,7 +523,7 @@ function Profile() {
             {sl ? <button className="bt2" style={{ marginLeft: "20px" }} onClick={(event) => Addskill(event)}><CheckCircleIcon style={{ width: "30px", height: "30px" }} /></button> : null}
 
           </div>
-
+          {info !== {} ? showskill() : null}
         </div>
 
 
@@ -532,33 +532,34 @@ function Profile() {
 
 
 
-        {info !== {} ? showskill() : null}
+        
 
       </div>
+
+<div>
       <div className="profile_mid">
         {(decoded.data.username === params.username) ?
 
           <div>
-            <label className="l info_col" for="email" >Email:</label>
-            <input className="inpt ip" id="email" type="email" placeholder="Email ID" value={decoded.data.email} readOnly={true} /></div> : null}
-        <div >
-          <label className="l info_col" for="username" >Username:</label>
+            <label className="" for="email" >Email: </label>
+            <input className="inpt ip" id="email" type="email" placeholder="Email ID" value={decoded.data.email} readOnly={true} />
+            </div> : null}
+        <div>
+          <label className="" for="username" >Username: </label>
           <input className="inpt " onFocus={(event) => Unstate(event, 1)} id="username" type="text" value={params.username} readOnly={true} />
-
-
           {/* { (decoded.data.username===params.username)? <button className="editbtn"   style={{left:"780px",bottom:"7px",top:"-45px"}} onClick={(event)=>Unstate(event,1)}><EditIcon style={{width:"23px",height:"23px",color:"black"}}/></button>:null}
         {userp?(para===true||para===undefined)?<p className="userpara" style={{color:"#29bb89"}}>available</p>:<p className="userpara" style={{color:"red"}}>Already Exists</p>:null} */}
         </div>
 
         {(decoded.data.username === params.username) ?
           <div>
-            <label className="l info_col" for="phone" >Phone Number:</label>
+            <label className="" for="phone" >Phone Number: </label>
             {ph ? <input className="inpt ip" id="phone" type="text" placeholder="Phone Number" /> : <input className="inpt ip" onFocus={(event) => Unstate(event, 2)} id="phone" on type="text" value={info.phone} readOnly={true} />}
             {/* {ph?<button className="bt" style={{left:"740px",bottom:"83px"}} onClick={(event)=>Change(event,2)}><CheckCircleIcon style={{width:"23px",height:"23px"}} /></button>:null} */}
             {(decoded.data.username === params.username) ? <button className="editbtn" onClick={(event) => Unstate(event, 2)} ><EditIcon /></button> : null}
           </div> : null}
         <div>
-          <label className="l info_col inf" for="college" >College:</label>
+          <label className="" for="college" >College: </label>
           {clg ? <input className="inpt ip" id="college" type="text" placeholder="College Name" /> : <input className="inpt ip" onClick={(event) => Unstate(event, 3)} id="college" type="text" value={info.college} readOnly={true} />}
           {/* {clg?<button className="bt" style={{left:"740px",bottom:"83px"}} onClick={(event)=>Change(event,3)}><CheckCircleIcon style={{width:"23px",height:"23px"}} /></button>:null} */}
           {(decoded.data.username === params.username) ? <button className="editbtn" onClick={(event) => Unstate(event, 3)}><EditIcon /></button> : null}
@@ -566,10 +567,10 @@ function Profile() {
         {/* style={{left:"670px",bottom:"83px"} */}
         {(decoded.data.username === params.username) ?
           <div>
-            <label className="l info_col inf" for="upi" >UPI_ID:</label>
+            <label className="" for="upi" >UPI_ID: </label>
             {upi ? <input className="inpt ip" type="text" id="upi" placeholder="Add your UPI ID" /> : <input onFocus={(event) => Unstate(event, 4)} className="inpt ip" type="text" id="upi" value={info.upi} readOnly={true} />}
             {/* {upi?<button className="bt" style={{left:"740px",bottom:"83px"}} onClick={(event)=>Change(event,4)}><CheckCircleIcon style={{width:"23px",height:"23px"}} /></button>:null} */}
-            <button className="editbtn" style={{ marginTop: "10px" }} onClick={(event) => Unstate(event, 4)}><EditIcon /></button>
+            <button className="editbtn"  onClick={(event) => Unstate(event, 4)}><EditIcon /></button>
           </div>
           : null}
 
@@ -610,12 +611,8 @@ function Profile() {
         : null}
 
 
-
+</div>
     </div>
-
-
-
-
   )
 }
 

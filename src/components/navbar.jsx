@@ -9,7 +9,7 @@ import axios from "axios";
 import DoneIcon from '@material-ui/icons/Check';
 import logo from "./logo.png"
 
-
+// import url('https://fonts.googleapis.com/css2?family=Andada+Pro&family=Birthstone+Bounce:wght@500&family=Graduate&family=Handlee&family=Marcellus+SC&family=Merriweather&family=Pacifico&family=Quicksand:wght@600&family=Rampart+One&family=Satisfy&family=Shadows+Into+Light&family=Space+Grotesk:wght@300&display=swap');
 
 
 function NavigationBar() {
@@ -311,9 +311,6 @@ function NavigationBar() {
   function searchfocus(event) {
 
     event.preventDefault()
-
-    // document.getElementById("langpara").style.transform="translate(20px,0)"
-    // document.getElementById("langpara").style.transition="0.05s all ease-in-out"
   }
 
   function renderGroups() {
@@ -335,8 +332,8 @@ function NavigationBar() {
 
     return (
       <div >
+       
         <Navbar expand="lg" id="nav_bar" >
-
 
 
           <div className="dropdown">
@@ -356,78 +353,24 @@ function NavigationBar() {
 
 
 
-          {/* <img src={logo} className="navLogo" /> */}
-          <Navbar.Brand className="cyducktitle" href="/home" ><p><b>Cy<span>duck</span></b></p></Navbar.Brand>
+          <Navbar.Brand className="cyducktitle" href="/home" ><p>Cy<span className="logo">duck</span></p></Navbar.Brand>
+          
+        <input type="checkbox" name="check" id="check"/>
+        <label for="check" class="checkbtn"><i class="fa-solid fa-bars">meetahaldar</i></label>
+          <ul>
 
-
-          {/* <form className="frm" onSubmit={Search}>
-        <input id="search" className="searchInput" onMouseUp={(event)=>searchfocus(event)} placeholder="Search by ID or string" />
-        <button className="searchButton" type="submit"><SearchIcon /></button>
-        
-<MultiSelect
-        className="drop_down lang"
-        options={languages}
-        value={selected.languages}
-        onChange={(value)=>dropValueGetter(value,1)}
-        labelledBy={"language"}
+         <li><a className={`navitem ${currentpage === "Ask Question" ? "navitem_active" : null}`} href="/file" >Ask Question</a></li>
        
-      />
-     
-     
-<MultiSelect
-        className="drop_down field"
-        options={fields}
-        value={selected.fields}
-        onChange={(value)=>dropValueGetter(value,2)}
-        labelledBy={"field"}
-      />
-      
-      <MultiSelect
-        className="drop_down fram"
-        options={languages}
-        value={selected.frameworks}
-        onChange={(value)=>dropValueGetter(value,3)}
-        labelledBy="frameworks"
-        
-      />
-     <button className="filter_btn" type="submit">Filter<FilterListIcon /></button>
-        </form> */}
+         <li><a href="/community" className={`navitem ${currentpage === "Community" ? "navitem_active" : null}`}  >Community</a></li>
 
-          {/* { ((l.toString().substr((l.toString().length-("/file").length),("/file").length))!="/file" && (l.toString().substr((l.toString().length-("/file").length),("/file").length))!="/home")? */}
-          {/* <div> */}
-          <a className={`navitem ${currentpage === "Ask Question" ? "navitem_active" : null}`} href="/file" >Ask Question</a>
+          <li><a className={`navitem ${currentpage === "Editor" ? "navitem_active" : null}`} href="/editor" >Editor</a></li>
 
-
-          {/* { ((l.toString().substr((l.toString().length-("/editor").length),("/editor").length))!="/editor")? */}
-
-
-
-
-          {/* <div className="currentpage" >{currentpage}</div> */}
-
-          {/* { (l.toString().substr((l.toString().length-("/community").length),("/community").length))!="/community" && (l.toString().substr((l.toString().length-("/home").length),("/home").length))!="/home"?  */}
-          <a href="/community" className={`navitem ${currentpage === "Community" ? "navitem_active" : null}`}  >Community</a>
-
-          <a className={`navitem ${currentpage === "Editor" ? "navitem_active" : null}`} href="/editor" >Editor</a>
-
-          <a className={`navitem ${currentpage === "groups" ? "navitem_active" : null}`} onClick={() => groupstate ? setgroupstate(false) : setgroupstate(true)} style={{ position: "relative", left: "-50px", cursor: "pointer" }} >Groups</a>
+       <li> <a className={`navitem ${currentpage === "groups" ? "navitem_active" : null}`} onClick={() => groupstate ? setgroupstate(false) : setgroupstate(true)} >Groups</a></li>  
           {groupstate ? renderGroups() : null}
-
-
-
+          </ul>
           <div>
-
           </div>
-
-
-          {/* 
-  {lpara || selected.languages.length===0?<p id="langpara" className="langpara">languages</p>:<p className="langpara1" >languages</p>}
-     {fpara || selected.fields.length===0?<p className="fieldpara">fields</p>:<p className="fieldpara1" >fields</p>}
-     {frpara || selected.frameworks.length===0?<p className="framepara">frameworks</p>:<p className="framepara1" >frameworks</p>} */}
-
-
         </Navbar>
-
 
       </div>
     )
@@ -437,54 +380,20 @@ function NavigationBar() {
 
   function BeforeLoginNav() {
     return (
-      <div >
+      <div>
         <Navbar expand="lg" id="nav_bar" >
+    
+          <Navbar.Brand className="cyducktitle" href="/home" ><p>Cy<span className="logo">Duck</span></p></Navbar.Brand>
 
-          <Navbar.Brand className="cyducktitle" href="/home" ><p><b>Cy<span>Duck</span></b></p></Navbar.Brand>
-
-          {/* <form className="frm1" onSubmit={Search}>
-        <input id="search" className="searchInput" placeholder="Search" />
-        <button className="searchButton" type="submit"><SearchIcon /></button>
-<MultiSelect
-        className="drop_down lang"
-        options={languages}
-        value={selected.languages}
-        onChange={(value)=>dropValueGetter(value,1)}
-        labelledBy={"Select"}
-      />
-      <p className="langpara">languages</p>
-<MultiSelect
-        className="drop_down field"
-        options={fields}
-        value={selected.fields}
-        onChange={(value)=>dropValueGetter(value,2)}
-        labelledBy={"Select"}
-      />
-      <span className="fieldtip">fields</span>
-      <MultiSelect
-        className="drop_down fram"
-        options={languages}
-        value={selected.frameworks}
-        onChange={(value)=>dropValueGetter(value,3)}
-        labelledBy={"Select"}
-      />
-      <span className="framtip">framworks</span>
-        </form> */}
-
-
-          <div className="navSign">
-            <a className="navitem" href="/signin">Signin</a>
-            <a className="navitem" href="signup">Signup</a>
-          </div>
-
-
-
-          <a href="/community" className="navitem" >Community</a>
-
-          {/* 
-      {lpara || selected.languages.length===0?<p id="langpara" style={{right:"1142px"}} className="langpara">languages</p>:<p className="langpara1" >languages</p>}
-     {fpara || selected.fields.length===0?<p className="fieldpara "  style={{right:"981px"}}>fields</p>:<p className="fieldpara1" >fields</p>}
-     {frpara || selected.frameworks.length===0?<p className="framepara"  style={{right:"826px"}} >frameworks</p>:<p className="framepara1" >frameworks</p>} */}
+          <input type="checkbox" name="check" id="check"/>
+        <label for="check" className="checkbtn"><i class="fa-solid fa-bars">➰</i></label>
+<ul className="firstNav">
+       
+           <li><a className="navitem" href="/signin">SignIn</a></li> 
+           <li>   <a className="navitem" href="signup">SignUp</a></li> 
+  
+           <li>  <a href="/community" className="navitem" >Community</a></li> 
+          </ul>
         </Navbar>
 
       </div>
