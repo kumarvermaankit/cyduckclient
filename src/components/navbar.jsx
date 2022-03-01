@@ -356,7 +356,7 @@ function NavigationBar() {
           <Navbar.Brand className="cyducktitle" href="/home" ><p>Cy<span className="logo">duck</span></p></Navbar.Brand>
           
         <input type="checkbox" name="check" id="check"/>
-        <label for="check" class="checkbtn"><i class="fa-solid fa-bars">meetahaldar</i></label>
+        <label for="check" class="checkbtn"><i class="fa-solid fa-bars">XXXXX</i></label>
           <ul>
 
          <li><a className={`navitem ${currentpage === "Ask Question" ? "navitem_active" : null}`} href="/file" >Ask Question</a></li>
