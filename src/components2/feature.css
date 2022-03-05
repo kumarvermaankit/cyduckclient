@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#feature {
+  background-color: rgb(226, 226, 247);
+  padding: 3%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.item {
+  margin: 10px;
+  text-align: center;
+}
+.item h1,
+p {
+  padding: 10px;
+}
+.item i {
+  padding: 15px;
+  color: #fefefe;
+  background-color: #142f43;
+  border-radius: 50%;
+}
