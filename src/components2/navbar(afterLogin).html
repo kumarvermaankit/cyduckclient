@@ -22,13 +22,37 @@
         <label for="check" class="checkbtn"
           ><i class="fa-solid fa-bars"></i
         ></label>
+
         <ul class="firstNav">
-          <li><a class="navitem" href="/signin">SignIn</a></li>
-          <li><a class="navitem" href="signup">SignUp</a></li>
+          <li><a class="navitem" href="">Ask Question</a></li>
+          <li><a class="navitem" href="/editor">Editor</a></li>
 
           <li><a href="/community" class="navitem">Community</a></li>
+          <li><a href="" class="navitem">Groups</a></li>
+          <li>
+            <div>
+              <button onclick="myFunction()">
+                <img
+                  src="https://png.pngtree.com/png-clipart/20190921/original/pngtree-cartoon-boy-encounters-doubt-png-material-at-work-png-image_4693480.jpg"
+                  class="profile_image"
+                  alt=""
+                />
+              </button>
+              <ul class="profile-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="profile_menu"><a href="">Profile</a></li>
+                <li class="profile_menu"><a href="">My Questions</a></li>
+                <li class="profile_menu"><a href="">FAQ</a></li>
+                <li class="profile_menu"><a href=""> LogOut</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
     </nav>
+    <script>
+      function myFunction() {
+        document.getElementsByClassName("profile_menu").classList.add("display");
+      }
+    </script>
   </body>
 </html>
