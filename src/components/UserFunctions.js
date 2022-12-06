@@ -19,7 +19,7 @@ export const register = newUser => {
 export const login = user => {
 
     return axios
-        .post('https://cyduck2.herokuapp.com/signin', {
+        .post('https://cyduck.cyclic.app/signin', {
             email: user.email,
             password: user.password
 

@@ -22,7 +22,7 @@ import jwt_decode from "jwt-decode"
 function Community(props) {
     const url2 = `http://localhost:5000`
 
-    const url = `https://cyduck2.herokuapp.com`
+    const url = `https://cyduck.cyclic.app`
 
     let params = useParams();
 

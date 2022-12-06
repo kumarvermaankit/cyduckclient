@@ -31,7 +31,7 @@ import { Cookies, useCookies } from "react-cookie"
 function Qcode() {
 
 
-  const url = `https://cyduck2.herokuapp.com`;
+  const url = `https://cyduck.cyclic.app`;
   const url2 = `http://localhost:5000`
   const [CD, setCD] = useState(true)
 

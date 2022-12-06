@@ -20,7 +20,7 @@ import storage from "./fire_base"
 // import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 export default function Quillanswer() {
 
-    const url=`https://cyduck.herokuapp.com`;
+    const url=`https://cyduck.cyclic.app`;
     const [answerarr,setanswerarr]=useState([])
     const [modules,setmodules]=useState({
         toolbar: {

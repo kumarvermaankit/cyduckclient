@@ -15,7 +15,7 @@ function Google() {
 
         axios({
             method: "POST",
-            url: "https://cyduck2.herokuapp.com/googlelogin",
+            url: "https://cyduck.cyclic.app/googlelogin",
             data: { tokenId: response.tokenId }
         }).then(res => {
             console.log(res)

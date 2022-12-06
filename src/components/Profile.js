@@ -15,7 +15,7 @@ import storage from "./fire_base"
 
 function Profile() {
 
-  const url = `https://cyduck2.herokuapp.com`
+  const url = `https://cyduck.cyclic.app`
 
   let params = useParams()
   var tkn = localStorage.getItem('usertoken');

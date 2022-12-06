@@ -29,7 +29,7 @@ function File(props) {
 
 
   let history = useHistory();
-  const url = `https://cyduck2.herokuapp.com`
+  const url = `https://cyduck.cyclic.app`
   const url2 = `http://localhost:5000`
   var [i, seti] = useState(false)
   const [files, setFile] = useState([]);

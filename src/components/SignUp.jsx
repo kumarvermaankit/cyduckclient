@@ -9,7 +9,7 @@ import Google from "./googlelogin";
 import cyduck from "./cyduck.png";
 const url2 = `http://localhost:5000`
 
-const url = `https://cyduck2.herokuapp.com`
+const url = `https://cyduck.cyclic.app`
 
 function SignUp(props) {
 
@@ -212,11 +212,8 @@ function SignUp(props) {
                             v-model="password"
                             type="password"
                             placeholder="Your Password"
-
-
-
-                            type="password" name="password" value={userP.password} onChange={(event) => OnChange(event, 0)} required="true" autoComplete="off"
-                        >
+                            name="password" value={userP.password} onChange={(event) => OnChange(event, 0)} required="true" autoComplete="off"
+>
                         </input>
                     </div>
                     {/* <div>
