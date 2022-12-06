@@ -115,7 +115,7 @@ function NavigationBar() {
     }
 
     if (decoded) {
-      axios.get(`https://cyduck2.herokuapp.com/profile/${decoded.data.username}`)
+      axios.get(`${url}/profile/${decoded.data.username}`)
         .then((result) => {
 
           Setprofile(result.data)
