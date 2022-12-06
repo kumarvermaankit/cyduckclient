@@ -76,7 +76,7 @@ function StartingPage() {
                     <div class="row">
 
                         <div class="col-lg-6">
-                            <h1 class="big-heading">Pay and get your doubts resolved instantly.</h1>
+                            <h1 class="big-heading">Easy and interactive way to solve coding doubts.</h1>
                             <a type="button" class="btn btn-outline-light btn-lg download-button" href={tkn === null ? `/signin` : `/file`} >
                                 Ask Question </a>
                             <a type="button" class="btn btn-outline-light btn-lg download-button" href={tkn === null ? `/signin` : `community`} >
@@ -211,11 +211,11 @@ function StartingPage() {
                     <div class="pricing-column col-lg-3 col-md-6">
                         <div class="card">
                             <div class="card-header">
-                                <h3>Bronze</h3>
+                                <h3>Free</h3>
                             </div>
                             <div class="card-body">
-                                <h2 class="price-text">₹ 3</h2>
-                                <p>Get your queries answered in 6 Hr</p>
+                                <h2 class="price-text">Free</h2>
+                                <p>Post your question for free</p>
 
                                 <a class="btn btn-lg btn-block btn-outline-dark" href="/file" type="button" >Ask Question</a>
                             </div>
@@ -225,11 +225,11 @@ function StartingPage() {
                     <div class="pricing-column col-lg-3 col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3>Silver</h3>
+                                <h3>Free</h3>
                             </div>
                             <div class="card-body">
-                                <h2 class="price-text">₹ 5</h2>
-                                <p>Get your queries answered in 3 Hr</p>
+                                <h2 class="price-text">Free</h2>
+                                <p>Post your question for free</p>
 
 
                                 <a class="btn btn-lg btn-block btn-outline-dark" href="/file" type="button" >Ask Question</a>
@@ -240,11 +240,11 @@ function StartingPage() {
                     <div class="pricing-column col-lg-3 col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3>Gold </h3>
+                                <h3>Free</h3>
                             </div>
                             <div class="card-body">
-                                <h2 class="price-text">₹ 10</h2>
-                                <p>Get your queries answered in 1 Hr</p>
+                                <h2 class="price-text">Free</h2>
+                                <p>Post your question for free</p>
 
 
                                 <a class="btn btn-lg btn-block btn-outline-dark" href="/file" type="button" >Ask Question</a>
@@ -268,7 +268,7 @@ function StartingPage() {
                             <a href="https://t.me/joinchat/xrbUyk1degk5OTll" target="_blank"><i style={{ color: "white" }} className="icon ion-social-instagram" ><TelegramIcon /></i></a>
                             <a href="https://www.linkedin.com/company/cyduck/" target="_blank"><i style={{ color: "white" }} className="icon ion-social-youtube-outline" ><LinkedInIcon /></i></a>
                             <a ><i className="icon ion-social-twitter" ></i><TwitterIcon /></a>
-                            <a href="#" href="https://discord.gg/XJNPaF4b" target="_blank">D</a>
+                            <a  href="https://discord.gg/XJNPaF4b" target="_blank">D</a>
                         </div>
                     </div>
                     <p className="copyright" style={{ color: 'white' }}>© Copyright 2021 Cyduck</p>
